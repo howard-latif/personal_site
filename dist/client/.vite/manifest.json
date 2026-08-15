@@ -1,0 +1,105 @@
+{
+  "_routing-C8d2kZHy.js": {
+    "file": "assets/routing-C8d2kZHy.js",
+    "name": "routing",
+    "imports": [
+      "_web-DP-5sGlP.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js"
+    ]
+  },
+  "_web-DP-5sGlP.js": {
+    "file": "assets/web-DP-5sGlP.js",
+    "name": "web"
+  },
+  "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js": {
+    "file": "assets/serverForms-BwRSo4ND.js",
+    "name": "serverForms",
+    "src": "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "_routing-C8d2kZHy.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0/node_modules/@solidjs/web/serialization/dist/decode.js"
+    ]
+  },
+  "node_modules/.pnpm/@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0/node_modules/@solidjs/web/serialization/dist/decode.js": {
+    "file": "assets/decode-3X5v8ClT.js",
+    "name": "decode",
+    "src": "node_modules/.pnpm/@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0/node_modules/@solidjs/web/serialization/dist/decode.js",
+    "isDynamicEntry": true
+  },
+  "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx": {
+    "file": "assets/_...404_-B4b1xmQW.js",
+    "name": "_...404_",
+    "src": "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "virtual:solid-ssr-entry-client.tsx"
+    ]
+  },
+  "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx": {
+    "file": "assets/blog-ejb2uqHc.js",
+    "name": "blog",
+    "src": "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "virtual:solid-ssr-entry-client.tsx"
+    ]
+  },
+  "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx": {
+    "file": "assets/index-Mb5_AV1U.js",
+    "name": "index",
+    "src": "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "virtual:solid-ssr-entry-client.tsx"
+    ]
+  },
+  "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx": {
+    "file": "assets/music-HGqImzQ6.js",
+    "name": "music",
+    "src": "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "virtual:solid-ssr-entry-client.tsx"
+    ]
+  },
+  "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx": {
+    "file": "assets/projects-BJz_e1zB.js",
+    "name": "projects",
+    "src": "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "virtual:solid-ssr-entry-client.tsx"
+    ]
+  },
+  "virtual:solid-ssr-entry-client.tsx": {
+    "file": "assets/virtual_solid-ssr-entry-client-C4R3UlBm.js",
+    "name": "virtual_solid-ssr-entry-client",
+    "src": "virtual:solid-ssr-entry-client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_web-DP-5sGlP.js",
+      "_routing-C8d2kZHy.js"
+    ],
+    "dynamicImports": [
+      "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx",
+      "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx",
+      "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx",
+      "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx",
+      "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx"
+    ],
+    "css": [
+      "assets/virtual_solid-ssr-entry-client-DhTYVLiP.css"
+    ]
+  }
+}
