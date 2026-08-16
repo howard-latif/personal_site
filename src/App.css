@@ -31,6 +31,12 @@
   font-style: normal;
 }
 
+.cormorant-sc-buttonfont {
+  font-family: "Cormorant SC", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .vertical-space {
   padding: var(--hpad) 0;
 }
@@ -131,6 +137,8 @@ a:focus-visible {
 
 .button-list a {
   color: var(--fg);
+  text-align: left;
+  font-size: 0.925rem;
   text-decoration: none;
   padding: 0 0.5rem 0 0;
   border-radius: 0.5rem;

@@ -10,7 +10,7 @@ type ButtonListProps = {
 export default function ButtonList(props: ButtonListProps) {
   return (
     <div style="display:flex; justify-content: center;">
-      <div class="button-list">
+      <div class="button-list bodoni-moda-sc-titlefont">
         <For each={props.children}>
           {({ label, url }) => <a href={url}>§ {label}</a>}
         </For>
