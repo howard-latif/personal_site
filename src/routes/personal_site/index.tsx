@@ -15,7 +15,7 @@ export default function Home() {
         </figcaption>
       </figure>
       <div class="vertical-space" />
-      <p class="max-halfwidth italic">
+      <p class="italic">
         my writings can be found in the{" "}
         <a href="" onClick={() => navigate("/personal_site/blog")}>
           blog
