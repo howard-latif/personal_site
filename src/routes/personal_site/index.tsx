@@ -8,12 +8,12 @@ export default function Home() {
     <main>
       <Title>Home - Howard Latif</Title>
       <h1>Howard Latif</h1>
-      <figure>
-        <img class="landing-img" src="/personal_site/landing.jpeg" />
-        <figcaption class="italic" style="opacity: 35%; margin: -0.25em 0 0 0;">
-          art by malena bozzini
-        </figcaption>
-      </figure>
+      <div class="center">
+        <figure>
+          <img class="landing-img" src="/personal_site/landing.jpeg" />
+          <figcaption>art by malena bozzini</figcaption>
+        </figure>
+      </div>
       <div class="vertical-space" />
       <p class="italic">
         my writings can be found in the{" "}

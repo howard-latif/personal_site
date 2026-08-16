@@ -1,7 +1,8 @@
 :root {
   --fg: rgb(55 55 55);
   --bg: rgb(231 231 225);
-  --fg2: rgb(137, 137, 100);
+  --fg2: rgb(137 137 100);
+  --fg3: rgb(137 137 137);
   --fgr: rgb(75, 35, 35);
   --fgb: rgb(35 35 75);
   --fgp: rgb(85 35 85);
@@ -155,7 +156,21 @@ a:focus-visible {
 .landing-img {
   width: 15rem;
   height: auto;
+}
+
+figure {
   border: var(--fg) solid 0.05rem;
   margin: 1rem;
   padding: 1.625rem;
+  max-width: fit-content;
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--fg3);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
