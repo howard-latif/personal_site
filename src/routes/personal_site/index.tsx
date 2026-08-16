@@ -11,20 +11,20 @@ export default function Home() {
       <figure>
         <img class="landing-img" src="/personal_site/landing.jpeg" />
         <figcaption class="italic" style="opacity: 35%; margin: -0.25em 0 0 0;">
-          malena bozzini
+          art by malena bozzini
         </figcaption>
       </figure>
       <div class="vertical-space" />
       <p class="max-halfwidth italic">
-        My writings can be found in the{" "}
+        my writings can be found in the{" "}
         <a href="" onClick={() => navigate("/personal_site/blog")}>
           blog
         </a>{" "}
-        page whilst code{" "}
+        page whilst code in the{" "}
         <a href="" onClick={() => navigate("/personal_site/projects")}>
           projects
         </a>{" "}
-        in the Projects page.
+        page
       </p>
       <div class="vertical-space" />
       <p>
