@@ -9,10 +9,12 @@ type ButtonListProps = {
 
 export default function ButtonList(props: ButtonListProps) {
   return (
-    <div class="button-list">
-      <For each={props.children}>
-        {({ label, url }) => <a href={url}>§ {label}</a>}
-      </For>
+    <div style="display:flex; justify-content: center;">
+      <div class="button-list">
+        <For each={props.children}>
+          {({ label, url }) => <a href={url}>§ {label}</a>}
+        </For>
+      </div>
     </div>
   );
 }
