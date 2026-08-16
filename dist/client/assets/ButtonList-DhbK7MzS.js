@@ -1,1 +1,0 @@
-import{S as e,_ as t,b as n,g as r,n as i,u as a}from"./web-DZBBnk0z.js";var o=t(`<div class=center><div class="button-list bodoni-moda-sc-titlefont">`),s=t(`<a>§ `);function c(t){var c=o(),l=c.firstChild;return a(l,e(n,{get each(){return t.children},children:({label:e,url:t})=>(()=>{var n=s();return n.firstChild,i(n),r(n,`href`,t),a(n,e,null),n})()})),c}export{c as t};

@@ -1,36 +1,51 @@
 import { Title } from "@solidjs/meta";
+import VertSpace from "../../components/VertSpace";
 import { useNavigate } from "@solidjs/router";
 
-export default function Home() {
+function Portrait() {
+  return (
+    <div class="center">
+      <figure class>
+        <img class="landing-img" src="/personal_site/landing.jpeg" />
+        <figcaption>art by malena bozzini</figcaption>
+      </figure>
+    </div>
+  );
+}
+
+function Quote() {
   const navigate = useNavigate();
 
+  return (
+    <p class="italic">
+      these{" "}
+      <a href="" onClick={() => navigate("/personal_site/blog")}>
+        words
+      </a>{" "}
+      for you to listen, these{" "}
+      <a href="" onClick={() => navigate("/personal_site/projects")}>
+        symbols
+      </a>{" "}
+      for you to dream
+    </p>
+  );
+}
+
+export default function Home() {
   return (
     <main>
       <Title>Home - Howard Latif</Title>
       <h1>Howard Latif</h1>
-      <div class="center">
-        <figure>
-          <img class="landing-img" src="/personal_site/landing.jpeg" />
-          <figcaption>art by malena bozzini</figcaption>
-        </figure>
+      <Portrait />
+      <Quote />
+      <VertSpace />
+      <div class="center child-height-grow">
+        <div class="indexbody">
+          <p class="bodoni-moda-sc-titlefont">Please contact</p>{" "}
+          <code>howard.latif@proton.me</code>{" "}
+          <p class="bodoni-moda-sc-titlefont">for business enquiries</p>
+        </div>
       </div>
-      <div class="vertical-space" />
-      <p class="italic">
-        my writings can be found in the{" "}
-        <a href="" onClick={() => navigate("/personal_site/blog")}>
-          blog
-        </a>{" "}
-        page whilst code in the{" "}
-        <a href="" onClick={() => navigate("/personal_site/projects")}>
-          projects
-        </a>{" "}
-        page
-      </p>
-      <div class="vertical-space" />
-      <p>
-        Please contact <code>howard.latif@proton.me</code> for business
-        enquiries.
-      </p>
     </main>
   );
 }
