@@ -4,13 +4,13 @@ export default function Cv() {
   return (
     <main>
       <Title>Blog - Howard Latif</Title>
-      <h1>sup</h1>
-      <ul>
-        <li>Of Language, Theory and Models</li>
-        <li>An introduction to Type Theory</li>
-        <li>What is Computation?</li>
-        <li>Speculations on a Jurisprudence in the age of AI</li>
-      </ul>
+      <h2>my thoughts</h2>
+      <div>
+        <div>Of Language, Theory and Models</div>
+        <div>An introduction to Type Theory</div>
+        <div>What is Computation?</div>
+        <div>Speculations on a Jurisprudence in the age of AI</div>
+      </div>
     </main>
   );
 }

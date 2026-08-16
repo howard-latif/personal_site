@@ -18,7 +18,7 @@ export default function Document(props: ParentProps) {
         <title>Solid App</title>
         <HydrationScript />
       </head>
-      <body>{props.children}</body>
+      <body class="baskervville-bodyfont">{props.children}</body>
     </html>
   );
 }

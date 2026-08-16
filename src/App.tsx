@@ -9,7 +9,7 @@ export default function App() {
       {(props) => (
         <>
           <Title>⚡️ Howard Latif</Title>
-          <nav>
+          <nav class="bodoni-moda-sc-titlefont">
             <a href={`/personal_site/${paths()}`}>Home</a>
             <a href={paths.personal_site.blog()}>Blog</a>
             <a href={paths.personal_site.projects()}>Projects</a>

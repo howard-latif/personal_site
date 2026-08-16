@@ -4,7 +4,7 @@ export default function Cv() {
   return (
     <main>
       <Title>Projects - Howard Latif</Title>
-      <h1>hey</h1>
+      <h2>my software</h2>
       <p>
         Click{" "}
         <a target="_blank" href="https://github.com/howard-latif">
@@ -12,10 +12,10 @@ export default function Cv() {
         </a>{" "}
         for my github
       </p>
-      <ul>
-        <li>Rust Chess Bot</li>
-        <li>Experience Interpretation Diagram</li>
-      </ul>
+      <div>
+        <div>Rust Chess Bot</div>
+        <div>Experience Interpretation Diagram</div>
+      </div>
     </main>
   );
 }
