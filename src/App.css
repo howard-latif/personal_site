@@ -2,7 +2,17 @@
   --fg: rgb(55 55 55);
   --bg: rgb(231 231 225);
   --fg2: rgb(137 137 100);
+  --fgr: rgb(75 35 35);
+  --fgb: rgb(35 35 75);
+  --fgp: rgb(85 35 85);
   --pad: 1.25rem;
+  --hpad: 0.7rem;
+  --margin: 1rem;
+}
+
+::selection {
+  color: var(--bg);
+  background-color: var(--fg2);
 }
 
 .bodoni-moda-sc-titlefont {
@@ -22,7 +32,7 @@
 }
 
 .vertical-space {
-  padding: var(--pad) 0 var(--pad) 0;
+  padding: var(--hpad) 0;
 }
 
 .max-halfwidth {
@@ -45,14 +55,18 @@ body {
 :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Bodoni Moda SC", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 1.75rem;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.7rem;
+  padding-bottom: 0.5rem;
 }
 
 nav {
-  padding: var(--pad);
+  padding: var(--pad) 0 0 0;
   display: flexbox;
   justify-content: space-evenly;
   align-items: center;
@@ -76,7 +90,7 @@ nav > a:hover {
 }
 
 main {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 main a {
@@ -104,4 +118,38 @@ a:focus-visible {
   to {
     transform: rotate(360deg);
   }
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-list a {
+  color: var(--fg);
+  text-decoration: none;
+  padding: 0 0.5rem 0 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: var(--hpad);
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.button-list a:hover {
+  color: var(--bg);
+  background-color: var(--fg);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.landing-img {
+  width: 15rem;
+  height: auto;
+  border: var(--fg) solid 0.05rem;
+  margin: 1rem;
+  padding: 1.625rem;
 }

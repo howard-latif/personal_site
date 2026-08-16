@@ -1,1 +1,0 @@
-import{_ as e,u as t,x as n}from"./web-DP-5sGlP.js";import{t as r}from"./virtual_solid-ssr-entry-client-C-anbdR1.js";var i=e(`<main><h2>my soul</h2><div><div>Until</div><div>Hands</div><div>Takers`);function a(){var e=i();return e.firstChild,t(e,n(r,{children:`Music - Howard Latif`}),e.firstChild),e}export{a as default};
