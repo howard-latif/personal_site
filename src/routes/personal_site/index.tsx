@@ -2,6 +2,8 @@ import { Title } from "@solidjs/meta";
 import VertSpace from "../../components/VertSpace";
 import { useNavigate } from "@solidjs/router";
 
+import { FaRegularDotCircle } from "solid-icons/fa";
+
 function Portrait() {
   return (
     <div class="center">
@@ -41,9 +43,16 @@ export default function Home() {
       <VertSpace />
       <div class="center child-height-grow">
         <div class="indexbody">
-          <p class="bodoni-moda-sc-titlefont">Please contact</p>{" "}
-          <code>howard.latif@proton.me</code>{" "}
-          <p class="bodoni-moda-sc-titlefont">for business enquiries</p>
+          <div>
+            <p class="bodoni-moda-sc-titlefont">Please contact</p>{" "}
+            <code>howard.latif@proton.me</code>{" "}
+            <p class="bodoni-moda-sc-titlefont">for business enquiries</p>
+          </div>
+          <div style="display: flex; flex: 1; justify-content: center;">
+            <div style="color: var(--fg2); padding-bottom: 1rem; align-self: flex-end;">
+              <FaRegularDotCircle />
+            </div>
+          </div>
         </div>
       </div>
     </main>

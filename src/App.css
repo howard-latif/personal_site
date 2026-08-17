@@ -2,7 +2,6 @@
   --fg: rgb(55 55 55);
   --bg: rgb(231 231 225);
   --fg2: rgb(137 137 100);
-  --fg3: rgb(137 137 137);
   --fgc: rgb(25 25 25);
   --fgr: rgb(105, 35, 35);
   --fgb: rgb(35 35 105);
@@ -120,9 +119,9 @@ main {
 }
 
 main a {
-  color: var(--fg2);
-  text-decoration-color: var(--fg2);
-  text-decoration-thickness: 0.05em;
+  color: var(--fg);
+  text-decoration-color: var(--fg);
+  text-decoration-thickness: 0.07em;
   text-underline-offset: 0.2em;
   transition: color 150ms ease;
 }
@@ -137,8 +136,8 @@ main a {
 }
 
 .button-list {
-  display: flex;
   margin-top: var(--hpad);
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
@@ -164,6 +163,10 @@ main a {
 }
 
 .indexbody {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
   background-color: var(--fg);
   max-width: 25vw;
   padding: var(--hpad) var(--pad);
@@ -198,7 +201,7 @@ main a {
 }
 
 figure {
-  border: var(--fg) solid 0.05rem;
+  border: var(--fg2) solid 0.05rem;
   margin: 1rem;
   padding: 1.625rem;
   max-width: fit-content;
@@ -206,7 +209,7 @@ figure {
 
 figcaption {
   font-style: italic;
-  color: var(--fg3);
+  color: var(--fg2);
 }
 
 .center {
@@ -220,7 +223,7 @@ figcaption {
 
 a:hover {
   color: var(--bg);
-  background-color: var(--fg2);
+  background-color: var(--fg);
 }
 
 a:focus-visible {
