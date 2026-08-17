@@ -49,7 +49,7 @@ export default function Home() {
             <p class="bodoni-moda-sc-titlefont">for business enquiries</p>
           </div>
           <div style="display: flex; flex: 1; justify-content: center;">
-            <div style="color: var(--fg2); padding-bottom: 1rem; align-self: flex-end;">
+            <div style="color: var(--fg2); margin-bottom: 0.525em; align-self: flex-end;">
               <FaRegularDotCircle />
             </div>
           </div>

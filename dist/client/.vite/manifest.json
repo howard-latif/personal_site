@@ -1,9 +1,10 @@
 {
-  "_ButtonList-Cn3hXQL3.js": {
-    "file": "assets/ButtonList-Cn3hXQL3.js",
+  "_ButtonList-BjSAy8nB.js": {
+    "file": "assets/ButtonList-BjSAy8nB.js",
     "name": "ButtonList",
     "imports": [
-      "_web-Bc8ffP-1.js"
+      "_web-Bc8ffP-1.js",
+      "_fa-C6oHGHjX.js"
     ]
   },
   "_events-DY93cWV1.js": {
@@ -14,6 +15,13 @@
     ],
     "dynamicImports": [
       "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js"
+    ]
+  },
+  "_fa-C6oHGHjX.js": {
+    "file": "assets/fa-C6oHGHjX.js",
+    "name": "fa",
+    "imports": [
+      "_web-Bc8ffP-1.js"
     ]
   },
   "_routing-DNbMHhZ3.js": {
@@ -48,7 +56,7 @@
     "isDynamicEntry": true
   },
   "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/_...404_-DkUltOOp.js",
+    "file": "assets/_...404_-ByXwgFIE.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
@@ -58,51 +66,52 @@
     ]
   },
   "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/blog-DV2CeQDI.js",
+    "file": "assets/blog-VX7WAY-M.js",
     "name": "blog",
     "src": "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_web-Bc8ffP-1.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ButtonList-Cn3hXQL3.js"
+      "_ButtonList-BjSAy8nB.js"
     ]
   },
   "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/index-BuB8QHcO.js",
+    "file": "assets/index-CFamvOhj.js",
     "name": "index",
     "src": "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_web-Bc8ffP-1.js",
       "_routing-DNbMHhZ3.js",
-      "virtual:solid-ssr-entry-client.tsx"
+      "virtual:solid-ssr-entry-client.tsx",
+      "_fa-C6oHGHjX.js"
     ]
   },
   "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/music-BJHFGCxb.js",
+    "file": "assets/music-BlPccZ1L.js",
     "name": "music",
     "src": "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_web-Bc8ffP-1.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ButtonList-Cn3hXQL3.js"
+      "_ButtonList-BjSAy8nB.js"
     ]
   },
   "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/projects-CXZVje0K.js",
+    "file": "assets/projects-B3K0xBwg.js",
     "name": "projects",
     "src": "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_web-Bc8ffP-1.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ButtonList-Cn3hXQL3.js"
+      "_ButtonList-BjSAy8nB.js"
     ]
   },
   "virtual:solid-ssr-entry-client.tsx": {
-    "file": "assets/virtual_solid-ssr-entry-client-CaOoaWtO.js",
+    "file": "assets/virtual_solid-ssr-entry-client-BmQoBvKT.js",
     "name": "virtual_solid-ssr-entry-client",
     "src": "virtual:solid-ssr-entry-client.tsx",
     "isEntry": true,
@@ -119,7 +128,7 @@
       "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx"
     ],
     "css": [
-      "assets/virtual_solid-ssr-entry-client-DiTK7abL.css"
+      "assets/virtual_solid-ssr-entry-client-CBe-qO4m.css"
     ]
   }
 }

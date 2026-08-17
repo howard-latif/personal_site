@@ -1,6 +1,7 @@
 :root {
   --fg: rgb(55 55 55);
   --bg: rgb(231 231 225);
+  --fgh: rgb(255 255 255 / 37%);
   --fg2: rgb(137 137 100);
   --fgc: rgb(25 25 25);
   --fgr: rgb(105, 35, 35);
@@ -105,7 +106,7 @@ nav > a {
 }
 
 nav > a:hover {
-  background-color: rgb(255 255 255 / 37%);
+  background-color: var(--fgh);
   color: var(--fg2);
 }
 
@@ -141,25 +142,34 @@ main a {
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  max-width: 45vw;
-  background-color: var(--fg);
+  max-width: 50vw;
+  min-width: 25vw;
+  background-color: var(--fgh);
 }
 
 .button-list a {
-  color: var(--bg);
+  color: var(--fg);
   text-align: left;
   font-size: 0.8em;
   text-decoration: none;
   padding: var(--pad);
-  border-bottom: rgb(0 0 0 / 30%) solid 0.05em;
+  border-bottom: solid 0.05em;
+  border-image: linear-gradient(
+      to right,
+      var(--bg) 0%,
+      var(--fg2) 30%,
+      var(--fg2) 70%,
+      var(--bg) 100%
+    )
+    1;
   transition:
     background-color 150ms ease,
     color 150ms ease;
 }
 
 .button-list a:hover {
-  color: var(--fg);
-  background-color: var(--fg2);
+  color: var(--bg);
+  background-color: var(--fg);
 }
 
 .indexbody {
@@ -167,8 +177,7 @@ main a {
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  background-color: var(--fg);
-  max-width: 25vw;
+  background-color: var(--fgh);
   padding: var(--hpad) var(--pad);
   padding-bottom: 0;
   margin-bottom: 0;
@@ -177,13 +186,13 @@ main a {
 
 .indexbody p {
   font-size: 0.8em;
-  color: var(--bg);
+  color: var(--fg);
 }
 
 .indexbody code {
   font-size: 1em;
-  background-color: var(--fg2);
-  color: var(--fgc);
+  background-color: var(--fgc);
+  color: var(--bg);
   white-space: pre-wrap;
   overflow-wrap: break-word;
 
@@ -201,7 +210,7 @@ main a {
 }
 
 figure {
-  border: var(--fg2) solid 0.05rem;
+  border: var(--fg2) solid 0.01rem;
   margin: 1rem;
   padding: 1.625rem;
   max-width: fit-content;
