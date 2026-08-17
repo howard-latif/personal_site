@@ -1,6 +1,5 @@
 import { Title } from "@solidjs/meta";
 import ButtonList from "../../components/ButtonList";
-import MarkdownIt from "markdown-it";
 
 function Quote() {
   return (
@@ -21,14 +20,11 @@ function Quote() {
 }
 
 export default function Cv() {
-  const md = new MarkdownIt();
-  const result = md.parse("", {});
   return (
     <main>
       <Title>Blog - Howard Latif</Title>
       <h2>my thoughts</h2>
       <Quote />
-      <p>{console.log(result) ?? ""}</p>
       <ButtonList
         type={0}
         children={[

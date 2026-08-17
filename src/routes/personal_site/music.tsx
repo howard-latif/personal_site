@@ -3,7 +3,7 @@ import { Title } from "@solidjs/meta";
 
 function Quote() {
   return (
-    <p class="italic">is my love more real, if it's in a poetry or a song?</p>
+    <p class="italic">is my love more real, if it's in poetry or a song?</p>
   );
 }
 

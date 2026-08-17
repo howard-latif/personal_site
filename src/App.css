@@ -3,10 +3,11 @@
   --bg: rgb(231 231 225);
   --fgh: rgb(255 255 255 / 37%);
   --fg2: rgb(137 137 100);
+  --fg230: rgb(137 137 100 / 30%);
   --fgc: rgb(25 25 25);
-  --fgr: rgb(105, 35, 35);
-  --fgb: rgb(35 35 105);
-  --fgp: rgb(105 35 105);
+  --fgr: rgb(125, 35, 35);
+  --fgb: rgb(35 35 125);
+  --fgp: rgb(125 35 125);
   --pad: 1.25rem;
   --hpad: 0.7rem;
   --margin: 1rem;
@@ -144,11 +145,11 @@ main a {
   align-content: stretch;
   max-width: 50vw;
   min-width: 25vw;
-  background-color: var(--fgh);
+  background-color: var(--fg);
 }
 
 .button-list a {
-  color: var(--fg);
+  color: var(--fgh);
   text-align: left;
   font-size: 0.8em;
   text-decoration: none;
@@ -156,10 +157,10 @@ main a {
   border-bottom: solid 0.05em;
   border-image: linear-gradient(
       to right,
-      var(--bg) 0%,
-      var(--fg2) 30%,
-      var(--fg2) 70%,
-      var(--bg) 100%
+      var(--fg) 0%,
+      var(--fgh) 30%,
+      var(--fgh) 70%,
+      var(--fg) 100%
     )
     1;
   transition:
@@ -210,7 +211,15 @@ main a {
 }
 
 figure {
-  border: var(--fg2) solid 0.01rem;
+  border: solid 0.05em;
+  border-image: linear-gradient(
+      to right,
+      var(--fgb) 0%,
+      var(--fgp) 45%,
+      var(--fgp) 55%,
+      var(--fgr) 100%
+    )
+    1;
   margin: 1rem;
   padding: 1.625rem;
   max-width: fit-content;
@@ -219,6 +228,7 @@ figure {
 figcaption {
   font-style: italic;
   color: var(--fg2);
+  opacity: 30%;
 }
 
 .center {
