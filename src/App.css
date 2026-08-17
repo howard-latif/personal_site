@@ -142,7 +142,7 @@ main a {
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  max-width: 50vw;
+  max-width: 45vw;
   background-color: var(--fg);
 }
 
