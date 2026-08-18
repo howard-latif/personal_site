@@ -32,7 +32,7 @@ export default function ButtonList(props: ButtonListProps) {
           {({ label, url }) => <a href={url}>§ {label}</a>}
         </For>
         <div style="display: flex; flex: 1; justify-content: center;">
-          <div style="color: var(--fg2); padding-bottom: 1rem; align-self: flex-end;">
+          <div style="color: var(--fgh); padding-bottom: 1rem; align-self: flex-end;">
             {getIcon(props.type)}
           </div>
         </div>

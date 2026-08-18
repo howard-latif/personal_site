@@ -1,5 +1,8 @@
 import { Title } from "@solidjs/meta";
-import ButtonList from "../../components/ButtonList";
+import { RAW_MARKDOWN, renderSolid2WKatex } from "../../blog";
+import ContentList from "../../components/ContentList";
+import ContentListButton from "../../components/ContentList/ContentListButton";
+import { getColor, useContentListType } from "../../components/ContentList/contentListType";
 
 function Quote() {
   return (
@@ -7,7 +10,10 @@ function Quote() {
       <div style="display: flex; flex-direction: column; gap:0;">
         <div class="italic">
           the unexamined life is not worth living — Socrates
-          <div style="font-size: 0.875em; opacity: 30%; color: var(--fg2);">
+          <div
+            class="noselect"
+            style="font-size: 0.875em; opacity: 30%; color: var(--fg2);"
+          >
             ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ — Σωκράτης
           </div>
         </div>
@@ -17,20 +23,20 @@ function Quote() {
 }
 
 export default function Cv() {
+  const cl_type = useContentListType();
+  const col = getColor(cl_type);
   return (
     <main>
       <Title>Blog - Howard Latif</Title>
-      <h1>my thoughts</h1>
+      <h1 class={col}>my thoughts</h1>
       <Quote />
-      <ButtonList
-        type={0}
-        children={[
-          { label: "Of Language, Theory and Models", url: "" },
-          { label: "Introduction to Type Theory", url: "" },
-          { label: "An Ontology of Computation", url: "" },
-          { label: "Jurisprudence for the age of AI", url: "" },
-        ]}
-      />
+      {/* <div>{renderSolid2WKatex(RAW_MARKDOWN.md_comp)}</div> */}
+      <ContentList>
+        <ContentListButton>Of Language, Theory and Models</ContentListButton>
+        <ContentListButton>Introduction to Type Theory</ContentListButton>
+        <ContentListButton>An Ontology of Computation</ContentListButton>
+        <ContentListButton>Jurisprudence for the Age of AI</ContentListButton>
+      </ContentList>
     </main>
   );
 }

@@ -2,31 +2,51 @@
 
 # TODO
 
-GRAPHICS:
-button list with content pre-list?
-- parent resize animation with dynamic content changes
-- blog; markdown solid component render
-- music; music player <<< no it should be a persistent toast that stays as u nav
-- projects; if hosted put it in, otherwise just nav to github repo
-
-page transitions
-
 BACKEND:
 audio component for music page
+
 - make basic seek and play/pause button
 - defaults to store song state to first in list
 - auto set to next track
-- css for active selection (do for nav too somehow once u figure out location signals)
-- (make proper recording somehow, somewhere)
+- (3) css for active selection (do for nav too somehow once u figure out location signals)
+  - `const params = useParams<{ page: string }>();`
+  - <Content page={params.page} />
 
 markdown blog
-- markdown-to-jsx/html AST tree traversal to construct solidjs component
-- they might already have method calls to map AST to some JSX construction.. u might not need to write ur own tree traversal; look into rules in their gh
-- << stop procrastinating on this
+
+- (5) math ruleset in parser
+- (4) make blogpost component with its own style for its children
 
 TECH DEBT:
-cleanup to use proper idiomatic solidjs to style, route, components
-
-- use children component props instead of array of objects data in props
+- (2) make indexbody an instance of button-list
 - figure out how to prepend `personal_site` to all paths
   - otherwise make a hack for router.ts for paths call to prepend it
+
+```
+(alias) const RuleType: {
+ readonly blockQuote: 0;
+ readonly breakLine: 1;
+ readonly breakThematic: 2;
+ readonly codeBlock: 3;
+ readonly codeInline: 4;
+ readonly footnote: 5;
+ readonly footnoteReference: 6;
+ readonly frontmatter: 7;
+ readonly gfmTask: 8;
+ readonly heading: 9;
+ readonly htmlBlock: 10;
+ readonly htmlComment: 11;
+ readonly htmlSelfClosing: 12;
+ readonly image: 13;
+ readonly link: 14;
+ readonly orderedList: 15;
+ readonly paragraph: 16;
+ readonly ref: 17;
+ readonly refCollection: 18;
+ readonly table: 19;
+ readonly text: 20;
+ readonly textFormatted: 21;
+ readonly unorderedList: 22;
+}
+import RuleType
+```

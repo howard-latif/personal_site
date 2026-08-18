@@ -1,5 +1,10 @@
 import { Title } from "@solidjs/meta";
-import ButtonList from "../../components/ButtonList";
+import ContentList from "../../components/ContentList";
+import ContentListButton from "../../components/ContentList/ContentListButton";
+import {
+  getColor,
+  useContentListType,
+} from "../../components/ContentList/contentListType";
 
 function Quote() {
   return (
@@ -7,14 +12,14 @@ function Quote() {
       <div class="italic">
         so let it be{" "}
         <span>
-          <a target="_blank" href="https://github.com/howard-latif">
+          <a class="ab" target="_blank" href="https://github.com/howard-latif">
             written
           </a>
         </span>{" "}
-        , so let it be done
+        , so let it be done — T. A. Davis.
       </div>
       <div
-        class="bodoni-moda-sc-titlefont"
+        class="font-title noselect"
         style="font-size: 0.8em; opacity: 30%; color: var(--fg2);"
       >
         ita scribatur, ita fiat
@@ -24,18 +29,17 @@ function Quote() {
 }
 
 export default function Cv() {
+  const cl_type = useContentListType();
+  const col = getColor(cl_type);
   return (
     <main>
       <Title>Projects - Howard Latif</Title>
-      <h1>my code</h1>
+      <h1 class={col}>my code</h1>
       <Quote />
-      <ButtonList
-        type={1}
-        children={[
-          { label: "Rust Chess Bot", url: "" },
-          { label: "Experience Interpretation Diagram", url: "" },
-        ]}
-      />
+      <ContentList>
+        <ContentListButton>Rust Chess Bot</ContentListButton>
+        <ContentListButton>Experience Interpretation Diagram</ContentListButton>
+      </ContentList>
     </main>
   );
 }

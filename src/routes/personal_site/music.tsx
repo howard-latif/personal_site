@@ -1,6 +1,8 @@
 import AudioPlayer from "../../components/AudioPlayer";
-import ButtonList from "../../components/ButtonList";
 import { Title } from "@solidjs/meta";
+import ContentList from "../../components/ContentList";
+import ContentListButton from "../../components/ContentList/ContentListButton";
+import { getColor, useContentListType } from "../../components/ContentList/contentListType";
 
 function Quote() {
   return (
@@ -9,7 +11,7 @@ function Quote() {
         is my love more real, if it's in poetry or a song?
       </div>
       <div
-        class="bodoni-moda-sc-titlefont"
+        class="font-title noselect"
         style="text-transform: lowercase; font-size: 0.85em; opacity: 30%; color: var(--fg2);"
       >
         Моя любовь будет более реальной, <br />
@@ -20,20 +22,19 @@ function Quote() {
 }
 
 export default function Cv() {
+  const cl_type = useContentListType();
+  const col = getColor(cl_type);
   return (
     <main>
       <Title>Music - Howard Latif</Title>
-      <h1>my soul</h1>
+      <h1 class={col}>my soul</h1>
       <Quote />
-      <AudioPlayer />
-      <ButtonList
-        type={2}
-        children={[
-          { label: "Until", url: "" },
-          { label: "Hands", url: "" },
-          { label: "Takers", url: "" },
-        ]}
-      />
+      {/* <AudioPlayer /> */}
+      <ContentList>
+        <ContentListButton>Until</ContentListButton>
+        <ContentListButton>Hands</ContentListButton>
+        <ContentListButton>Takers</ContentListButton>
+      </ContentList>
     </main>
   );
 }
