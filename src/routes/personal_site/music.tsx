@@ -1,3 +1,4 @@
+import AudioPlayer from "../../components/AudioPlayer";
 import ButtonList from "../../components/ButtonList";
 import { Title } from "@solidjs/meta";
 
@@ -11,7 +12,8 @@ function Quote() {
         class="bodoni-moda-sc-titlefont"
         style="text-transform: lowercase; font-size: 0.85em; opacity: 30%; color: var(--fg2);"
       >
-        Моя любовь будет более реальной, <br />если она выражена в стихах или в песне?
+        Моя любовь будет более реальной, <br />
+        если она выражена в стихах или в песне?
       </div>
     </>
   );
@@ -23,6 +25,7 @@ export default function Cv() {
       <Title>Music - Howard Latif</Title>
       <h1>my soul</h1>
       <Quote />
+      <AudioPlayer />
       <ButtonList
         type={2}
         children={[

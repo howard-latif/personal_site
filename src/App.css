@@ -144,7 +144,7 @@ main a {
   align-items: stretch;
   align-content: stretch;
   max-width: 50vw;
-  min-width: 25vw;
+  min-width: 15vw;
   background-color: var(--fg);
 }
 
@@ -179,10 +179,19 @@ main a {
   align-items: stretch;
   align-content: stretch;
   background-color: var(--fgh);
+  /* border: solid 0.05em;
+  border-image: linear-gradient(
+      to right,
+      var(--fgb) 0%,
+      var(--fgp) 45%,
+      var(--fgp) 55%,
+      var(--fgr) 100%
+    )
+    1; */
   padding: var(--hpad) var(--pad);
   padding-bottom: 0;
   margin-bottom: 0;
-  line-height: 2rem;
+  line-height: 1.25rem;
 }
 
 .indexbody p {
@@ -192,8 +201,8 @@ main a {
 
 .indexbody code {
   font-size: 1em;
-  background-color: var(--fgc);
-  color: var(--bg);
+  background-color: var(--fgh);
+  color: var(--fg);
   white-space: pre-wrap;
   overflow-wrap: break-word;
 
@@ -234,6 +243,7 @@ figcaption {
     var(--fgp) 50%,
     var(--fgr) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 60%;

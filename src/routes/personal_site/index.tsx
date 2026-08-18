@@ -29,7 +29,12 @@ function Quote() {
       <a href="" onClick={() => navigate("/personal_site/projects")}>
         symbols
       </a>{" "}
-      for you to dream
+      for you to dream, <br />
+      my{" "}
+      <a href="" onClick={() => navigate("/personal_site/music")}>
+        serenades
+      </a>{" "}
+      for those who believe
     </p>
   );
 }
@@ -39,8 +44,8 @@ export default function Home() {
     <main>
       <Title>Home - Howard Latif</Title>
       <h1>Howard Latif</h1>
-      <Quote />
       <Portrait />
+      <Quote />
       <VertSpace />
       <div class="center child-height-grow">
         <div class="indexbody">
@@ -50,7 +55,7 @@ export default function Home() {
             <p class="bodoni-moda-sc-titlefont">for business enquiries</p>
           </div>
           <div style="display: flex; flex: 1; justify-content: center;">
-            <div style="color: var(--fg2); margin-bottom: 0.525em; align-self: flex-end;">
+            <div style="color: var(--fg2); margin-bottom: 1em; align-self: flex-end;">
               <FaRegularDotCircle />
             </div>
           </div>

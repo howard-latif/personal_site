@@ -5,19 +5,19 @@ function Quote() {
   return (
     <>
       <div class="italic">
-        our devotion, laid bare in the{" "}
+        so let it be{" "}
         <span>
           <a target="_blank" href="https://github.com/howard-latif">
-            works
+            written
           </a>
         </span>{" "}
-        we make
+        , so let it be done
       </div>
       <div
         class="bodoni-moda-sc-titlefont"
-        style="font-size: 0.75em; opacity: 30%; color: var(--fg2);"
+        style="font-size: 0.8em; opacity: 30%; color: var(--fg2);"
       >
-        Devotio nostra, in operibus quae facimus manifesta
+        ita scribatur, ita fiat
       </div>
     </>
   );
