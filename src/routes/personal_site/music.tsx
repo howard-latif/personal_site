@@ -3,7 +3,17 @@ import { Title } from "@solidjs/meta";
 
 function Quote() {
   return (
-    <p class="italic">is my love more real, if it's in poetry or a song?</p>
+    <>
+      <div class="italic">
+        is my love more real, if it's in poetry or a song?
+      </div>
+      <div
+        class="bodoni-moda-sc-titlefont"
+        style="text-transform: lowercase; font-size: 0.85em; opacity: 30%; color: var(--fg2);"
+      >
+        Моя любовь будет более реальной, <br />если она выражена в стихах или в песне?
+      </div>
+    </>
   );
 }
 
@@ -11,7 +21,7 @@ export default function Cv() {
   return (
     <main>
       <Title>Music - Howard Latif</Title>
-      <h2>my soul</h2>
+      <h1>my soul</h1>
       <Quote />
       <ButtonList
         type={2}

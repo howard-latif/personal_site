@@ -24,7 +24,8 @@ function Quote() {
       <a href="" onClick={() => navigate("/personal_site/blog")}>
         words
       </a>{" "}
-      for you to listen, these{" "}
+      for you to listen, <br />
+      these{" "}
       <a href="" onClick={() => navigate("/personal_site/projects")}>
         symbols
       </a>{" "}
@@ -38,8 +39,8 @@ export default function Home() {
     <main>
       <Title>Home - Howard Latif</Title>
       <h1>Howard Latif</h1>
-      <Portrait />
       <Quote />
+      <Portrait />
       <VertSpace />
       <div class="center child-height-grow">
         <div class="indexbody">

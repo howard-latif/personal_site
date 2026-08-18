@@ -5,14 +5,11 @@ function Quote() {
   return (
     <div class="center">
       <div style="display: flex; flex-direction: column; gap:0;">
-        <div class="italic" style="margin-right: 1em; padding-bottom: 0.75em;">
-          the unexamined life is not worth living
-          <div style="opacity: 30%; color: var(--fg2);">
-            ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ
+        <div class="italic">
+          the unexamined life is not worth living — Socrates
+          <div style="font-size: 0.875em; opacity: 30%; color: var(--fg2);">
+            ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ — Σωκράτης
           </div>
-        </div>
-        <div class="italic" style="align-self: flex-end;">
-          — Socrates
         </div>
       </div>
     </div>
@@ -23,7 +20,7 @@ export default function Cv() {
   return (
     <main>
       <Title>Blog - Howard Latif</Title>
-      <h2>my thoughts</h2>
+      <h1>my thoughts</h1>
       <Quote />
       <ButtonList
         type={0}

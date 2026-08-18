@@ -3,15 +3,23 @@ import ButtonList from "../../components/ButtonList";
 
 function Quote() {
   return (
-    <p class="italic">
-      click{" "}
-      <span>
-        <a target="_blank" href="https://github.com/howard-latif">
-          here
-        </a>
-      </span>{" "}
-      for my github profile page
-    </p>
+    <>
+      <div class="italic">
+        our devotion, laid bare in the{" "}
+        <span>
+          <a target="_blank" href="https://github.com/howard-latif">
+            works
+          </a>
+        </span>{" "}
+        we make
+      </div>
+      <div
+        class="bodoni-moda-sc-titlefont"
+        style="font-size: 0.75em; opacity: 30%; color: var(--fg2);"
+      >
+        Devotio nostra, in operibus quae facimus manifesta
+      </div>
+    </>
   );
 }
 
@@ -19,7 +27,7 @@ export default function Cv() {
   return (
     <main>
       <Title>Projects - Howard Latif</Title>
-      <h2>my code</h2>
+      <h1>my code</h1>
       <Quote />
       <ButtonList
         type={1}
