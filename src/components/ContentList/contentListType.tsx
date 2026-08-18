@@ -1,6 +1,6 @@
 import { useLocation } from "@solidjs/router";
 import { AiOutlineMoon, AiOutlineStar } from "solid-icons/ai";
-import { FaRegularDotCircle } from "solid-icons/fa";
+import { TbOutlineCircleDot } from "solid-icons/tb";
 import { RiOthersFlowerLine } from "solid-icons/ri";
 import { Element } from "solid-js";
 
@@ -23,7 +23,7 @@ type ContentListTypeData = {
 const contentListData: Record<ContentListType, ContentListTypeData> = {
   [ContentListType.Index]: {
     subpath: "",
-    icon: <FaRegularDotCircle />,
+    icon: <TbOutlineCircleDot />,
     col: "gray",
   },
   [ContentListType.Blog]: {

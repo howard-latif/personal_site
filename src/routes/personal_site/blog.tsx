@@ -2,7 +2,6 @@ import { Title } from "@solidjs/meta";
 import { RAW_MARKDOWN, renderSolid2WKatex } from "../../blog";
 import ContentList from "../../components/ContentList";
 import ContentListButton from "../../components/ContentList/ContentListButton";
-import { getColor, useContentListType } from "../../components/ContentList/contentListType";
 
 function Quote() {
   return (
@@ -23,12 +22,10 @@ function Quote() {
 }
 
 export default function Cv() {
-  const cl_type = useContentListType();
-  const col = getColor(cl_type);
   return (
     <main>
       <Title>Blog - Howard Latif</Title>
-      <h1 class={col}>my thoughts</h1>
+      <h1>my thoughts</h1>
       <Quote />
       {/* <div>{renderSolid2WKatex(RAW_MARKDOWN.md_comp)}</div> */}
       <ContentList>

@@ -94,10 +94,6 @@ a {
   transition: all 150ms ease;
 }
 
-.content-list > a {
-  font-size: 0.8em;
-}
-
 a:hover {
   color: var(--white);
   background-color: var(--black);
@@ -209,6 +205,9 @@ CLASS STYLES
 */
 
 .inline-code {
+  font-style: monospace;
+  text-transform: none;
+  letter-spacing: 0;
   background-color: var(--gray);
   color: var(--black);
   border-radius: 0.5rem;
@@ -241,17 +240,12 @@ CLASS STYLES
   text-decoration: none;
   padding: var(--gap);
   border-bottom: var(--gray) solid 0.05em;
+  font-size: 0.8em;
 }
 
 .content-list a:hover {
-  color: var(--bright);
-  border-bottom: var(--bright) solid 0.05em;
-}
-
-.content-list p {
-  color: var(--gray);
-  line-height: 1.5rem;
-  font-size: 0.8em;
+  color: var(--white);
+  border-bottom: var(--white) solid 0.05em;
 }
 
 .content-list-footer-container {
@@ -299,4 +293,20 @@ nav > a:hover {
 .landing-img {
   width: min(15rem, 65vw);
   height: auto;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.content-list-index-text {
+  color: var(--gray);
+  margin: 1rem 1.5rem;
+  font-size: 0.8em;
 }

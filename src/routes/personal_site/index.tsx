@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "@solidjs/router";
 
 import { FaRegularDotCircle } from "solid-icons/fa";
 import { createEffect } from "solid-js";
+import ContentList from "../../components/ContentList";
 
 function Portrait() {
   return (
@@ -63,16 +64,15 @@ export default function Home() {
       <Portrait />
       <Quote />
       <VertSpace />
-      <div class="content-list shrink grow-sub" style="align-self: center;">
+      <ContentList>
         <div style="padding-top: var(--gap);">
-          <p class="font-title">Please contact</p>{" "}
-          <code class="inline-code">howard.latif@proton.me</code>{" "}
-          <p class="font-title">for business enquiries</p>
+          <div class="font-title content-list-index-text">Please contact</div>
+          <code class="inline-code">howard.latif@proton.me</code>
+          <div class="font-title content-list-index-text">
+            for business enquiries
+          </div>
         </div>
-        <div style="color: var(--gray); align-self: stretch; flex: 1; display: flex; align-items: center; justify-content: flex-end; flex-direction: column; margin-bottom: var(--hgap);">
-          <FaRegularDotCircle />
-        </div>
-      </div>
+      </ContentList>
     </main>
   );
 }

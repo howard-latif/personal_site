@@ -8,17 +8,14 @@ audio component for music page
 - make basic seek and play/pause button
 - defaults to store song state to first in list
 - auto set to next track
-- (3) css for active selection (do for nav too somehow once u figure out location signals)
-  - `const params = useParams<{ page: string }>();`
-  - <Content page={params.page} />
 
 markdown blog
 
-- (5) math ruleset in parser
-- (4) make blogpost component with its own style for its children
+- (3) math ruleset in parser
+- (2) make blogpost component with its own style for its children
 
 TECH DEBT:
-- (2) make indexbody an instance of button-list
+
 - figure out how to prepend `personal_site` to all paths
   - otherwise make a hack for router.ts for paths call to prepend it
 

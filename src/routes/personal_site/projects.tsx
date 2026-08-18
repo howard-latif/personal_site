@@ -1,10 +1,6 @@
 import { Title } from "@solidjs/meta";
 import ContentList from "../../components/ContentList";
 import ContentListButton from "../../components/ContentList/ContentListButton";
-import {
-  getColor,
-  useContentListType,
-} from "../../components/ContentList/contentListType";
 
 function Quote() {
   return (
@@ -29,12 +25,10 @@ function Quote() {
 }
 
 export default function Cv() {
-  const cl_type = useContentListType();
-  const col = getColor(cl_type);
   return (
     <main>
       <Title>Projects - Howard Latif</Title>
-      <h1 class={col}>my code</h1>
+      <h1>my code</h1>
       <Quote />
       <ContentList>
         <ContentListButton>Rust Chess Bot</ContentListButton>
