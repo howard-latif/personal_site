@@ -48,8 +48,8 @@ GLOBAL STYLES
 -------------------------------------------------------------------------------
 */
 ::selection {
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--dark);
+  background-color: var(--gold);
 }
 
 body {

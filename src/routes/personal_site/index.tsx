@@ -1,9 +1,6 @@
 import { Title } from "@solidjs/meta";
 import VertSpace from "../../components/VertSpace";
-import { useLocation, useNavigate } from "@solidjs/router";
-
-import { FaRegularDotCircle } from "solid-icons/fa";
-import { createEffect } from "solid-js";
+import { useNavigate } from "@solidjs/router";
 import ContentList from "../../components/ContentList";
 
 function Portrait() {

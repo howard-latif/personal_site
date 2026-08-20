@@ -11,14 +11,8 @@ audio component for music page
 
 markdown blog
 
-- (3) math ruleset in parser
-- (2) make blogpost component with its own style for its children
-
-TECH DEBT:
-
-- figure out how to prepend `personal_site` to all paths
-  - otherwise make a hack for router.ts for paths call to prepend it
-
+- (1) make blogpost component with its own style for its children
+- (2) math ruleset in parser
 ```
 (alias) const RuleType: {
  readonly blockQuote: 0;
@@ -47,3 +41,10 @@ TECH DEBT:
 }
 import RuleType
 ```
+
+
+TECH DEBT:
+
+- figure out how to prepend `personal_site` to all paths
+  - otherwise make a hack for router.ts for paths call to prepend it
+
