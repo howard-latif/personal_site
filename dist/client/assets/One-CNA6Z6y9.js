@@ -1,0 +1,1 @@
+import{b as e}from"./web-CGmnXGFl.js";var t=e(`<div class=center><figure style=margin:1em><figure style=margin:0.5em><figure style=margin:0.15em;padding:1em><img class="landing-img noselect"src=/personal_site/one.jpg>`);function n(){return t()}export{n as default};
