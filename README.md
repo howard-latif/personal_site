@@ -2,15 +2,17 @@
 
 # TODO
 
-BACKEND:
-audio component for music page
+GRAPHICS:
+- SPA ContentList geometry animations?
 
+BACKEND:
+
+audio component for music page
 - make basic seek and play/pause button
 - defaults to store song state to first in list
 - auto set to next track
 
-markdown blog
-
+blog
 - (1) make blogpost component with its own style for its children
 - (2) math ruleset in parser
 ```
@@ -41,7 +43,6 @@ markdown blog
 }
 import RuleType
 ```
-
 
 TECH DEBT:
 

@@ -1,15 +1,20 @@
 import { Title } from "@solidjs/meta";
 import { Loading } from "solid-js";
 import { paths, Router } from "./router";
+import { useLocation } from "@solidjs/router";
 import "./App.css";
 
 export default function App() {
+  const f = () => {
+    const location = useLocation();
+    return location.pathname === "/personal_site/one";
+  };
   return (
     <Router>
       {(props) => (
         <>
           <Title>⚡️ Howard Latif</Title>
-          <nav class="font-title">
+          <nav class="font-title" style={f() ? "display: none;" : ""}>
             <a href={`/personal_site/${paths()}`}>Home</a>
             <a href={paths.personal_site.blog()}>Blog</a>
             <a href={paths.personal_site.projects()}>Projects</a>

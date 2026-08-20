@@ -1,1 +1,0 @@
-import{b as e,d as t,n,o as r,v as i}from"./web-CGmnXGFl.js";var a=e(`<a>§ `);function o(e){var o=a();return o.firstChild,n(o),t(o,()=>e.children,null),r(()=>e.href,e=>{i(o,`href`,e)}),o}export{o as t};
