@@ -1,5 +1,4 @@
 import { Title } from "@solidjs/meta";
-import VertSpace from "../../components/VertSpace";
 import { useNavigate } from "@solidjs/router";
 import ContentList from "../../components/ContentList";
 
@@ -60,7 +59,6 @@ export default function Home() {
       <h1>Howard Latif</h1>
       <Portrait />
       <Quote />
-      <VertSpace />
       <ContentList>
         <div style="padding-top: var(--gap);">
           <div class="font-title content-list-index-text">Please contact</div>
