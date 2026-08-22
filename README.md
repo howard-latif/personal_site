@@ -3,18 +3,20 @@
 # TODO
 
 GRAPHICS:
-- SPA ContentList geometry animations?
+
+- blog post page nav, next post, prev post, blog home page
 
 BACKEND:
 
-audio component for music page
-- make basic seek and play/pause button
-- defaults to store song state to first in list
-- auto set to next track
+- audio component for music page
+  - make basic seek and play/pause button
+  - defaults to store song state to first in list
+  - auto set to next track
 
-blog
-- (1) make blogpost component with its own style for its children
-- (2) math ruleset in parser
+- blog
+  - (1) component per rule
+  - (2) detect math e.g. $E=mc^2$ and block $$\\begin{align}\nf(x) &= y \\\\\n g \circ f(x) &= z\n\\end{align}$$
+
 ```
 (alias) const RuleType: {
  readonly blockQuote: 0;
@@ -48,4 +50,3 @@ TECH DEBT:
 
 - figure out how to prepend `personal_site` to all paths
   - otherwise make a hack for router.ts for paths call to prepend it
-

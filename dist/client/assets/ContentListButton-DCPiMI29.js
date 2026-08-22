@@ -1,1 +1,0 @@
-import{d as e,n as t,o as n,v as r,x as i}from"./web-Cps5mXpC.js";var a=i(`<a>§ `);function o(i){var o=a();return o.firstChild,t(o),e(o,()=>i.children,null),n(()=>i.href,e=>{r(o,`href`,e)}),o}export{o as t};

@@ -1,7 +1,8 @@
 import { Title } from "@solidjs/meta";
-import { RAW_MARKDOWN, renderSolid2WKatex } from "../../blog";
 import ContentList from "../../components/ContentList";
-import ContentListButton from "../../components/ContentList/ContentListButton";
+import BlogListButton from "../../components/ContentList/BlogListButton";
+import { PostId } from "../../components/BlogComponent";
+import { For } from "solid-js";
 
 function Quote() {
   return (
@@ -27,12 +28,10 @@ export default function Cv() {
       <Title>Blog - Howard Latif</Title>
       <h1>my thoughts</h1>
       <Quote />
-      {/* <div>{renderSolid2WKatex(RAW_MARKDOWN.md_comp)}</div> */}
       <ContentList>
-        <ContentListButton>Of Language, Theory and Models</ContentListButton>
-        <ContentListButton>Introduction to Type Theory</ContentListButton>
-        <ContentListButton>An Ontology of Computation</ContentListButton>
-        <ContentListButton>Jurisprudence for the Age of AI</ContentListButton>
+        <For each={Object.values(PostId)}>
+          {(post_id) => <BlogListButton post_id={post_id} />}
+        </For>
       </ContentList>
     </main>
   );

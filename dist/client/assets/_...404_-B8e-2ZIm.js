@@ -1,1 +1,0 @@
-import{T as e,d as t,x as n}from"./web-Cps5mXpC.js";import{t as r}from"./virtual_solid-ssr-entry-client-ZwNTXkYT.js";var i=n(`<main><h1>Page Not Found`);function a(){var n=i();return n.firstChild,t(n,e(r,{children:`Not Found - Solid App`}),n.firstChild),n}export{a as default};

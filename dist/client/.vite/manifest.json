@@ -1,49 +1,56 @@
 {
-  "_ContentList-9pXWmfE-.js": {
-    "file": "assets/ContentList-9pXWmfE-.js",
+  "_BlogComponent-CUSdwwfW.js": {
+    "file": "assets/BlogComponent-CUSdwwfW.js",
+    "name": "BlogComponent",
+    "imports": [
+      "_web-2yA-YbUI.js"
+    ]
+  },
+  "_ContentList-Bo27-OmZ.js": {
+    "file": "assets/ContentList-Bo27-OmZ.js",
     "name": "ContentList",
     "imports": [
-      "_web-Cps5mXpC.js",
-      "_routing-MZAYiiE-.js"
+      "_web-2yA-YbUI.js",
+      "_routing-Bwwrl1pj.js"
     ]
   },
-  "_ContentListButton-DCPiMI29.js": {
-    "file": "assets/ContentListButton-DCPiMI29.js",
+  "_ContentListButton-DInEVxJX.js": {
+    "file": "assets/ContentListButton-DInEVxJX.js",
     "name": "ContentListButton",
     "imports": [
-      "_web-Cps5mXpC.js"
+      "_web-2yA-YbUI.js"
     ]
   },
-  "_events-D86fcXDV.js": {
-    "file": "assets/events-D86fcXDV.js",
+  "_events-BJFQkwJ1.js": {
+    "file": "assets/events-BJFQkwJ1.js",
     "name": "events",
     "imports": [
-      "_web-Cps5mXpC.js"
+      "_web-2yA-YbUI.js"
     ],
     "dynamicImports": [
       "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js"
     ]
   },
-  "_routing-MZAYiiE-.js": {
-    "file": "assets/routing-MZAYiiE-.js",
+  "_routing-Bwwrl1pj.js": {
+    "file": "assets/routing-Bwwrl1pj.js",
     "name": "routing",
     "imports": [
-      "_web-Cps5mXpC.js"
+      "_web-2yA-YbUI.js"
     ]
   },
-  "_web-Cps5mXpC.js": {
-    "file": "assets/web-Cps5mXpC.js",
+  "_web-2yA-YbUI.js": {
+    "file": "assets/web-2yA-YbUI.js",
     "name": "web"
   },
   "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js": {
-    "file": "assets/serverForms-Dm-a0LRX.js",
+    "file": "assets/serverForms-2EADgmEp.js",
     "name": "serverForms",
     "src": "node_modules/.pnpm/@solidjs+router@2.0.0-next.16_@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0__solid-js@2.0.0-rc.0/node_modules/@solidjs/router/dist/data/serverForms.js",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
-      "_routing-MZAYiiE-.js",
-      "_events-D86fcXDV.js"
+      "_web-2yA-YbUI.js",
+      "_routing-Bwwrl1pj.js",
+      "_events-BJFQkwJ1.js"
     ],
     "dynamicImports": [
       "node_modules/.pnpm/@solidjs+web@2.0.0-rc.0_solid-js@2.0.0-rc.0/node_modules/@solidjs/web/serialization/dist/decode.js"
@@ -56,92 +63,106 @@
     "isDynamicEntry": true
   },
   "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/_...404_-B8e-2ZIm.js",
+    "file": "assets/_...404_-BdphcAeP.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
+      "_web-2yA-YbUI.js",
       "virtual:solid-ssr-entry-client.tsx"
     ]
   },
   "src/routes/personal_site/One.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/One-CJVR66fm.js",
+    "file": "assets/One-Hos59K1W.js",
     "name": "One",
     "src": "src/routes/personal_site/One.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js"
+      "_web-2yA-YbUI.js"
     ]
   },
   "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/blog-DzrhADSe.js",
+    "file": "assets/blog-BCvjymGK.js",
     "name": "blog",
     "src": "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
+      "_web-2yA-YbUI.js",
+      "_routing-Bwwrl1pj.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ContentList-9pXWmfE-.js",
-      "_ContentListButton-DCPiMI29.js"
+      "_ContentList-Bo27-OmZ.js",
+      "_ContentListButton-DInEVxJX.js",
+      "_BlogComponent-CUSdwwfW.js"
+    ]
+  },
+  "src/routes/personal_site/blogpost.tsx?pick=default&pick=$css&lang.tsx": {
+    "file": "assets/blogpost-CTxWVO12.js",
+    "name": "blogpost",
+    "src": "src/routes/personal_site/blogpost.tsx?pick=default&pick=$css&lang.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-2yA-YbUI.js",
+      "_routing-Bwwrl1pj.js",
+      "_BlogComponent-CUSdwwfW.js"
     ]
   },
   "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/index-C-M5ijIn.js",
+    "file": "assets/index-DceHT0go.js",
     "name": "index",
     "src": "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
-      "_routing-MZAYiiE-.js",
+      "_web-2yA-YbUI.js",
+      "_routing-Bwwrl1pj.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ContentList-9pXWmfE-.js"
+      "_ContentList-Bo27-OmZ.js"
     ]
   },
   "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/music-CB1fe_uB.js",
+    "file": "assets/music-BxJCX6NH.js",
     "name": "music",
     "src": "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
+      "_web-2yA-YbUI.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ContentList-9pXWmfE-.js",
-      "_ContentListButton-DCPiMI29.js"
+      "_ContentList-Bo27-OmZ.js",
+      "_ContentListButton-DInEVxJX.js"
     ]
   },
   "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx": {
-    "file": "assets/projects-BcQ9SI-S.js",
+    "file": "assets/projects-rIpuNy7q.js",
     "name": "projects",
     "src": "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
+      "_web-2yA-YbUI.js",
       "virtual:solid-ssr-entry-client.tsx",
-      "_ContentList-9pXWmfE-.js",
-      "_ContentListButton-DCPiMI29.js"
+      "_ContentList-Bo27-OmZ.js",
+      "_ContentListButton-DInEVxJX.js"
     ]
   },
   "virtual:solid-ssr-entry-client.tsx": {
-    "file": "assets/virtual_solid-ssr-entry-client-ZwNTXkYT.js",
+    "file": "assets/virtual_solid-ssr-entry-client-1Kg-hkkl.js",
     "name": "virtual_solid-ssr-entry-client",
     "src": "virtual:solid-ssr-entry-client.tsx",
     "isEntry": true,
     "imports": [
-      "_web-Cps5mXpC.js",
-      "_routing-MZAYiiE-.js",
-      "_events-D86fcXDV.js"
+      "_web-2yA-YbUI.js",
+      "_routing-Bwwrl1pj.js",
+      "_events-BJFQkwJ1.js"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx?pick=default&pick=$css&lang.tsx",
       "src/routes/personal_site/One.tsx?pick=default&pick=$css&lang.tsx",
       "src/routes/personal_site/blog.tsx?pick=default&pick=$css&lang.tsx",
+      "src/routes/personal_site/blogpost.tsx?pick=default&pick=$css&lang.tsx",
       "src/routes/personal_site/index.tsx?pick=default&pick=$css&lang.tsx",
       "src/routes/personal_site/music.tsx?pick=default&pick=$css&lang.tsx",
       "src/routes/personal_site/projects.tsx?pick=default&pick=$css&lang.tsx"
     ],
     "css": [
-      "assets/virtual_solid-ssr-entry-client-c86QKOtL.css"
+      "assets/virtual_solid-ssr-entry-client-H09Yuy1Z.css"
     ]
   }
 }

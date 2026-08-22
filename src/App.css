@@ -214,6 +214,20 @@ CLASS STYLES
   padding: 0 0.5rem 0 0.5rem;
 }
 
+.block-code {
+  display: block;
+  white-space: pre-wrap;
+  text-align: left;
+  /* from `.inline-code` */
+  font-style: monospace;
+  text-transform: none;
+  letter-spacing: 0;
+  background-color: var(--gray);
+  color: var(--black);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
 /** content list component */
 .content-list {
   margin-top: var(--gap);

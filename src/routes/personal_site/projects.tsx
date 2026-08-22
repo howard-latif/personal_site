@@ -33,6 +33,7 @@ export default function Cv() {
       <ContentList>
         <ContentListButton>Rust Chess Bot</ContentListButton>
         <ContentListButton>Experience Interpretation Diagram</ContentListButton>
+        <ContentListButton>Project Lambda</ContentListButton>
       </ContentList>
     </main>
   );
