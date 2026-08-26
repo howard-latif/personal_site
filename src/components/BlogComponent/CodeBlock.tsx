@@ -1,5 +1,5 @@
 import { JSX } from "@solidjs/web/jsx-runtime";
-import { For } from "@solidjs/web";
+import { For, Show } from "@solidjs/web";
 
 import { FaRegularCopy } from "solid-icons/fa";
 
@@ -28,13 +28,13 @@ function ClipboardBtn(props: ClipBoardBtnProps): JSX.Element {
 }
 
 function Header(props: CodeBlockProps): JSX.Element {
-  return props.lang !== undefined ? (
-    <div class="blog-block-code-header">
-      {props.lang}
-      <ClipboardBtn code={props.code} />
-    </div>
-  ) : (
-    <></>
+  return (
+    <Show when={props.lang !== undefined}>
+      <div class="blog-block-code-header">
+        {props.lang}
+        <ClipboardBtn code={props.code} />
+      </div>
+    </Show>
   );
 }
 

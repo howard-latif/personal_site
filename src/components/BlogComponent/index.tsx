@@ -1,4 +1,4 @@
-import type { ParentProps } from "solid-js";
+import { createContext, createSignal, Show, type ParentProps } from "solid-js";
 import { JSX } from "@solidjs/web/jsx-runtime";
 import { parser, RuleType } from "markdown-to-jsx/html";
 import type ASTNode from "markdown-to-jsx";
@@ -12,6 +12,7 @@ import Heading from "./Heading";
 import ThematicBreak from "./ThematicBreak";
 import CodeBlock from "./CodeBlock";
 import InlineCode from "./InlineCode";
+import SetFrontMatter, { FrontMatter } from "./FrontMatter";
 
 type Node = typeof ASTNode;
 
@@ -20,10 +21,10 @@ type ChildrenProps = ParentProps<{
 }>;
 
 function Children(props: ChildrenProps): JSX.Element {
-  return props.nodes.length > 0 ? (
-    <For each={props.nodes}>{(n) => node(n)}</For>
-  ) : (
-    <></>
+  return (
+    <Show when={props.nodes.length > 0}>
+      <For each={props.nodes}>{(n) => node(n)}</For>
+    </Show>
   );
 }
 
@@ -44,13 +45,11 @@ function node(node: Node): JSX.Element {
     case RuleType.codeInline:
       return <InlineCode code={node.text} />;
     case RuleType.footnote:
-      console.log(node);
       return <></>; //TODO
     case RuleType.footnoteReference:
-      console.log(node);
       return <></>; //TODO
     case RuleType.frontmatter:
-      return <></>; //TODO
+      return <SetFrontMatter text={node.text} />; //TODO
     case RuleType.gfmTask:
       return <></>; //TODO
     case RuleType.heading:
@@ -93,20 +92,6 @@ function node(node: Node): JSX.Element {
   }
 }
 
-function frontMatter(node: Node): Record<string, string> {
-  return Object.fromEntries(
-    node.text
-      .split("\n")
-      .filter((line: string) => line !== "---")
-      .map((line: string) =>
-        line
-          .trim()
-          .split(":")
-          .map((s: string) => s.trim()),
-      ),
-  );
-}
-
 function BlogPostFooter(): JSX.Element {
   return (
     <div class="content-list-footer-container noselect" style="width: 100%">
@@ -119,22 +104,33 @@ function BlogPostFooter(): JSX.Element {
   );
 }
 
+export type StateContext = {
+  value: () => FrontMatter;
+  setValue: (value: FrontMatter) => void;
+};
+
+export const StateContext = createContext<StateContext>();
+
 type BlogComponentProps = {
   post_id: PostId;
 };
 
 export default function BlogComponent(props: BlogComponentProps): JSX.Element {
-  const ast: Node[] = parser(POST_DATA[props.post_id].raw);
-  const fmObj =
-    ast.length > 0 && ast[0].type === RuleType.frontmatter
-      ? frontMatter(ast[0])
-      : {};
+  const [value, setValue] = createSignal({} as FrontMatter);
   return (
-    <div class="blog grow-sub">
-      <div class="content-list grow-sub" style="max-width: 40em;">
-        <Children nodes={ast} />
+    <StateContext value={{ value, setValue }}>
+      <div class="blog grow-sub">
+        <div class="content-list grow-sub" style="max-width: 40em;">
+          <Show when={value()["title"] !== undefined}>
+            <Heading level={1}>{value().title}</Heading>
+          </Show>
+          <Show when={value()["date"] !== undefined}>
+            <div class="blog-date">{value()["date"]}</div>
+          </Show>
+          <Children nodes={parser(POST_DATA[props.post_id].raw)} />
+        </div>
+        <BlogPostFooter />
       </div>
-      <BlogPostFooter />
-    </div>
+    </StateContext>
   );
 }

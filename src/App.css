@@ -476,3 +476,10 @@ hr {
   align-items: center;
   gap: 0.5em;
 }
+
+.blog-date {
+  font-style: italic;
+  color: var(--gray);
+  text-align: right;
+  padding-right: var(--hgap);
+}

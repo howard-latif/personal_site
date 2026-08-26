@@ -3,8 +3,6 @@ date: 17th Aug 2026
 title: Of Language, Theory and Models
 ---
 
-# Of Language, Theory and Models
-
 The use of mathematics as a field (to me) isn't so much about the production of proofs in papers, or to construct new structures for their own sake. But rather for their eventual use, in mathematics itself or other domains, be it science, technology or the humanities, or even in the arts.
 
 asd\\
@@ -92,8 +90,6 @@ date: 17th Aug 2026
 title: Introduction to Type Theory
 ---
 
-# Introduction to Type Theory
-
 lorem ipsum
 
 - a
@@ -104,8 +100,6 @@ date: 17th Aug 2026
 title: Jurisprudence for the age of AI
 ---
 
-# Jurisprudence for the age of AI
-
 lorem ipsum
 
 test test test
@@ -113,8 +107,6 @@ test test test
 date: 22nd Aug 2026
 title: Cybernetic Anthropology
 ---
-
-# Cybernetic Anthropology
 
 lorem ipsum
 `,i=`---

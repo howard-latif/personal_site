@@ -3,8 +3,6 @@ date: 17th Aug 2026
 title: Of Language, Theory and Models
 ---
 
-# Of Language, Theory and Models
-
 The use of mathematics as a field (to me) isn't so much about the production of proofs in papers, or to construct new structures for their own sake. But rather for their eventual use, in mathematics itself or other domains, be it science, technology or the humanities, or even in the arts.
 
 asd\
