@@ -1,1 +1,0 @@
-import{D as e}from"./web-2yA-YbUI.js";import{b as t}from"./routing-Bwwrl1pj.js";import{t as n}from"./BlogComponent-CUSdwwfW.js";function r(){let[r,i]=t(),a=Number(r.postid);return e(n,{post_id:a})}export{r as default};

@@ -1,21 +1,19 @@
 import { Title } from "@solidjs/meta";
 import ContentList from "../../components/ContentList";
 import BlogListButton from "../../components/ContentList/BlogListButton";
-import { PostId } from "../../components/BlogComponent";
+import { PostId } from "../../components/BlogComponent/post_data";
 import { For } from "solid-js";
 
 function Quote() {
   return (
-    <div class="center">
-      <div style="display: flex; flex-direction: column; gap:0;">
-        <div class="italic">
-          the unexamined life is not worth living — Socrates
-          <div
-            class="noselect"
-            style="font-size: 0.875em; opacity: 30%; color: var(--fg2);"
-          >
-            ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ — Σωκράτης
-          </div>
+    <div class="pad-btm" style="display: flex; flex-direction: column; gap:0;">
+      <div class="italic">
+        the unexamined life is not worth living — Socrates
+        <div
+          class="noselect"
+          style="font-size: 0.875em; opacity: 30%; color: var(--fg2);"
+        >
+          ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ — Σωκράτης
         </div>
       </div>
     </div>

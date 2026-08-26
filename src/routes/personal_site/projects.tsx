@@ -4,7 +4,7 @@ import ContentListButton from "../../components/ContentList/ContentListButton";
 
 function Quote() {
   return (
-    <>
+    <div class="pad-btm">
       <div class="italic">
         so let it be{" "}
         <span>
@@ -20,7 +20,7 @@ function Quote() {
       >
         ita scribatur, ita fiat
       </div>
-    </>
+    </div>
   );
 }
 

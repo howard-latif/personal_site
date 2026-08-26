@@ -5,18 +5,15 @@ import ContentListButton from "../../components/ContentList/ContentListButton";
 
 function Quote() {
   return (
-    <>
+    <div class="pad-btm">
       <div class="italic">
         is my love more real, if it's in poetry or a song?
       </div>
-      <div
-        class="font-title noselect"
-        style="text-transform: lowercase; font-size: 0.85em; opacity: 30%; color: var(--fg2);"
-      >
-        Моя любовь будет более реальной, <br />
-        если она выражена в стихах или в песне?
+      <div class="font-title noselect" style="opacity: 30%; color: var(--fg2);">
+        أَيَكُونُ الْحُبُّ أَصْدَقَ إِذَا نَطَقَ بِهِ الشِّعْرُ وَغَنَّاهُ
+        الْمُغَنِّي؟
       </div>
-    </>
+    </div>
   );
 }
 

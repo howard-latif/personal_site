@@ -14,7 +14,7 @@ export default function App() {
       {(props) => (
         <>
           <Title>⚡️ Howard Latif</Title>
-          <nav class="font-title" style={f() ? "display: none;" : ""}>
+          <nav style={f() ? "display: none;" : ""}>
             <a href={`/personal_site/${paths()}`}>Home</a>
             <a href={paths.personal_site.blog()}>Blog</a>
             <a href={paths.personal_site.projects()}>Projects</a>

@@ -9,6 +9,7 @@ VARIABLES
   --dark: rgb(25 25 25);
   --bright: rgb(247 247 247);
   --gray: rgb(120 120 120);
+  --bgray: rgb(190 190 190);
   --gold: rgb(137 137 100);
   --_L: 35;
   --_H: 89;
@@ -53,6 +54,8 @@ GLOBAL STYLES
 }
 
 body {
+  font-family: "Baskervville", serif;
+  font-size: 0.975em;
   margin: 0;
   text-align: center;
   color: var(--black);
@@ -63,22 +66,34 @@ body {
   flex-direction: column;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 0.875em;
+  }
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  nav > a {
+    width: 100%;
+  }
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
   text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 0.15rem;
   text-underline-offset: 0.7rem;
   /* from .font-title */
-  font-family: "Bodoni Moda SC", serif;
+  font-family: "Baskervville", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
 }
 
 main {
   background-color: rgb(from var(--black) r g b / 0.02125);
-  margin-top: var(--gap);
   /* from `.grow` */
   display: flex;
   flex-direction: column;
@@ -175,6 +190,10 @@ FUNCTIONAL STYLES
   justify-content: center;
 }
 
+.pad-btm {
+  padding-bottom: var(--gap);
+}
+
 /** text transforms */
 .italic {
   font-style: italic;
@@ -230,7 +249,7 @@ CLASS STYLES
 
 /** content list component */
 .content-list {
-  margin-top: var(--gap);
+  font-family: "Baskervville", serif;
   align-items: stretch;
   align-content: stretch;
   min-width: 33vw;
@@ -247,7 +266,7 @@ CLASS STYLES
   padding: 0 var(--gap);
 }
 
-.content-list a {
+.content-list > a {
   cursor: pointer;
   color: var(--gray);
   text-align: left;
@@ -257,7 +276,7 @@ CLASS STYLES
   font-size: 0.8em;
 }
 
-.content-list a:hover {
+.content-list > a:hover {
   color: var(--white);
   border-bottom: var(--white) solid 0.05em;
 }
@@ -282,25 +301,34 @@ SPECIFIC COMPONENT STYLES
 -------------------------------------------------------------------------------
 */
 
+.blog > .content-list {
+  color: var(--bgray);
+}
+
 /** Nav bar */
 nav {
-  display: flexbox;
-  justify-content: space-evenly;
+  display: flex;
   align-items: center;
-  padding-top: var(--gap);
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 nav > a {
-  flex-grow: 1;
-  padding: var(--gap);
+  flex: 1 1 auto;
+  padding: var(--gap) 0;
   color: var(--black);
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0.2em;
 }
 
 nav > a:hover {
-  background-color: var(--bright);
-  color: var(--gold);
+  background-color: var(--gray);
+  color: var(--white);
 }
 
 /** home page img */
@@ -323,4 +351,128 @@ nav > a:hover {
   color: var(--gray);
   margin: 1rem 1.5rem;
   font-size: 0.8em;
+}
+
+.blog {
+  color: var(--bgray);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--black);
+}
+
+.blog h1 {
+  text-decoration: none;
+  padding-bottom: var(--hgap);
+  border-bottom: var(--gray) solid 0.0275em;
+  font-family: "Bodoni Moda SC", serif;
+}
+
+.blog-text {
+  line-height: 1.35em;
+  letter-spacing: 0.0067em;
+}
+
+.blog p {
+  text-align: left;
+  padding: 0 var(--gap);
+}
+
+.blog-nav {
+  margin-top: 4em;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.blog-nav {
+  color: var(--gold);
+  font-size: 1.05em;
+  letter-spacing: 0.1125em;
+}
+
+.blog-nav > a {
+  font-size: 0.875em;
+  padding: var(--hgap) var(--gap);
+}
+
+.blog-nav > a:hover {
+  background-color: rgb(255 0 0 / 0%);
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.blog-block-quote {
+  background-color: var(--dark);
+  color: var(--gray);
+  margin: var(--hgap) var(--gap);
+  border: solid 0.01em var(--black);
+  border-left: solid 0.16em var(--gray);
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: solid 0.01em var(--gray);
+}
+
+.blog-hr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 55%;
+}
+
+.blog-block-code {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--hgap);
+  margin: var(--hgap);
+  background-color: var(--dark);
+  font-family: monospace;
+  color: var(--gray);
+}
+
+.blog-inline-code {
+  padding: 0 0.25em;
+  /* from .blog-block-code */
+  background-color: var(--dark);
+  font-family: monospace;
+  color: var(--gray);
+  /* from .blog-block-code-line */
+  white-space: pre;
+}
+
+.blog-block-code-line {
+  white-space: pre;
+}
+
+.blog-block-code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--black);
+  margin-bottom: var(--hgap);
+}
+
+.blog-block-code-copy-icon {
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+
+.blog-block-code-copy-icon:hover {
+  color: var(--white);
+}
+
+.blog-block-code-num {
+  color: var(--black);
+}
+
+.blog-block-code-body {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  justify-items: start;
+  align-items: center;
+  gap: 0.5em;
 }

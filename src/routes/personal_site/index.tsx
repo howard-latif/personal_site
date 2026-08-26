@@ -24,27 +24,19 @@ function Quote() {
   const navigate = useNavigate();
 
   return (
-    <p class="italic">
+    <p class="italic" style="padding-bottom: var(--gap);">
       these{" "}
-      <a class="redbgh" href="" onClick={() => navigate("/personal_site/blog")}>
+      <a href="" onClick={() => navigate("/personal_site/blog")}>
         words
       </a>{" "}
       for you to listen, <br />
       these{" "}
-      <a
-        class="bluebgh"
-        href=""
-        onClick={() => navigate("/personal_site/projects")}
-      >
+      <a href="" onClick={() => navigate("/personal_site/projects")}>
         symbols
       </a>{" "}
       for you to dream, <br />
       my{" "}
-      <a
-        class="pinkbgh"
-        href=""
-        onClick={() => navigate("/personal_site/music")}
-      >
+      <a href="" onClick={() => navigate("/personal_site/music")}>
         serenades
       </a>{" "}
       for those who believe
@@ -61,11 +53,9 @@ export default function Home() {
       <Quote />
       <ContentList>
         <div style="padding-top: var(--gap);">
-          <div class="font-title content-list-index-text">Please contact</div>
+          <div class="content-list-index-text">Please contact</div>
           <code class="inline-code">howard.latif@proton.me</code>
-          <div class="font-title content-list-index-text">
-            for business enquiries
-          </div>
+          <div class="content-list-index-text">for business enquiries</div>
         </div>
       </ContentList>
     </main>
