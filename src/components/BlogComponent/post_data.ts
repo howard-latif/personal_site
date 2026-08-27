@@ -49,3 +49,5 @@ export const POST_DATA: PostData = {
     raw: md_CyberneticAnthropology,
   },
 };
+
+// TODO can this be automatically generate from the directory?

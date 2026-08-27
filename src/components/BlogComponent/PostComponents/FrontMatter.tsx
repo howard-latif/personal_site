@@ -1,6 +1,6 @@
 import { JSX } from "@solidjs/web/jsx-runtime";
 import { useContext } from "solid-js";
-import { StateContext } from "./index";
+import { StateContext } from "../state";
 
 export type FrontMatter = Record<string, string>;
 
@@ -9,7 +9,7 @@ type FrontMatterProps = {
 };
 
 export default function SetFrontMatter(props: FrontMatterProps): JSX.Element {
-  const { setValue } = useContext(StateContext);
+  const { setFrontMatter } = useContext(StateContext);
   const value = Object.fromEntries(
     props.text
       .split("\n")
@@ -22,7 +22,7 @@ export default function SetFrontMatter(props: FrontMatterProps): JSX.Element {
       ),
   );
 
-  queueMicrotask(() => setValue(value));
+  queueMicrotask(() => setFrontMatter(value));
 
   return <></>;
 }

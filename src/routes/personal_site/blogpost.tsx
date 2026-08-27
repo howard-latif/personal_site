@@ -4,6 +4,5 @@ import { useSearchParams } from "@solidjs/router";
 
 export default function BlogPost() {
   const [searchParams, _] = useSearchParams();
-  const postIdNum = Number(searchParams.postid);
-  return <BlogComponent post_id={postIdNum as PostId} />;
+  return <BlogComponent post_id={Number(searchParams.postid) as PostId} />;
 }

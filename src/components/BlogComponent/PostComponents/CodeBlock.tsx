@@ -29,12 +29,10 @@ function ClipboardBtn(props: ClipBoardBtnProps): JSX.Element {
 
 function Header(props: CodeBlockProps): JSX.Element {
   return (
-    <Show when={props.lang !== undefined}>
-      <div class="blog-block-code-header">
-        {props.lang}
-        <ClipboardBtn code={props.code} />
-      </div>
-    </Show>
+    <div class="blog-block-code-header">
+      {props.lang ?? "txt"}
+      <ClipboardBtn code={props.code} />
+    </div>
   );
 }
 
