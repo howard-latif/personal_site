@@ -15,12 +15,13 @@ BACKEND:
 
 - blog
   - (1) component per rule
-    - lists; sort out design for lists
-    - gfm; sort out static checkbox design, maybe just use icon?
-    - ref; wtf are refs?
-    - table; oi vey..
-    - footnote; blocked by custom parse
+    - table;
+      - grid css style has to be generated dynamically per table, depending on the number of columns, but there are styles that need not be dynamic
+      - lets not gaf about align
+    - alternative to queueMicrotask as it bugs ref signal..
     - math; blocked by katex and custom parse
+    - footnote; just render link to scroll to ref at bottom
+    - refCollection; at bottom
   - (2) detect math e.g. $E=mc^2$ and block $$\\begin{align}\nf(x) &= y \\\\\n g \circ f(x) &= z\n\\end{align}$$
 
 TECH DEBT:
@@ -28,3 +29,4 @@ TECH DEBT:
 - figure out how to prepend `personal_site` to all paths
   - otherwise make a hack for router.ts for paths call to prepend it
 - download font file and load it up as public asset. make everything self contained.. no link to outside
+- queueMicrotask is the wrong strat....

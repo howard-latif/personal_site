@@ -21,8 +21,10 @@ import Paragraph from "./Paragraph";
 import Link from "./Link";
 import Portrait from "../../Portrait";
 import HtmlElement from "./HtmlElement";
+import { OrderedList, UnorderedList } from "./List";
+import SetRefs from "./SetRefs";
 
-type Node = typeof ASTNode;
+export type Node = typeof ASTNode;
 
 const NodeContext = createContext<Node>();
 
@@ -73,8 +75,7 @@ export default function Post(props: PostProps): JSX.Element {
                 <SetFrontMatter text={node.text} />
               </MatchRule>
               <MatchRule rule={RuleType.gfmTask}>
-                <></>
-                {/* TODO just put some untoggleable checkbox */}
+                <input type="checkbox" checked={node.completed} disabled />
               </MatchRule>
               <MatchRule rule={RuleType.heading}>
                 <Heading level={node.level}>
@@ -105,24 +106,21 @@ export default function Post(props: PostProps): JSX.Element {
                 </Link>
               </MatchRule>
               <MatchRule rule={RuleType.orderedList}>
-                <></> {/* TODO */}
+                <OrderedList items={node.items} />
               </MatchRule>
               <MatchRule rule={RuleType.unorderedList}>
-                <></> {/* TODO */}
+                <UnorderedList items={node.items} />
               </MatchRule>
               <MatchRule rule={RuleType.paragraph}>
                 <Paragraph>
                   <Post ast={node.children} />
                 </Paragraph>
               </MatchRule>
-              <MatchRule rule={RuleType.ref}>
-                <></> {/* TODO */}
-              </MatchRule>
               <MatchRule rule={RuleType.refCollection}>
-                <></> {/* TODO */}
+                <SetRefs refs={node.refs} />
               </MatchRule>
               <MatchRule rule={RuleType.table}>
-                <></> {/* TODO */}
+                <></> {console.log(node)}
               </MatchRule>
               <MatchRule rule={RuleType.text}>{node.text}</MatchRule>
               <MatchRule rule={RuleType.textFormatted}>

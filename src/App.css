@@ -21,6 +21,49 @@ VARIABLES
   --hgap: 0.7rem;
 }
 
+@font-face {
+  font-family: "Bodoni Moda SC";
+  src: url("fonts/Bodoni_Moda_SC/BodoniModaSC.ttf");
+}
+@font-face {
+  font-family: "Bodoni Moda SC";
+  src: url("fonts/Bodoni_Moda_SC/BodoniModaSC-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Baskervville";
+  src: url("fonts/Baskervville/Baskervville-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Baskervville";
+  src: url("fonts/Baskervville/Baskervville-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("fonts/Cormorant_SC/CormorantSC-Regular.ttf");
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("fonts/Cormorant_SC/CormorantSC-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("fonts/Cormorant_SC/CormorantSC-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("fonts/Cormorant_SC/CormorantSC-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("fonts/Cormorant_SC/CormorantSC-Bold.ttf");
+  font-weight: 700;
+}
+
 .font-title {
   font-family: "Bodoni Moda SC", serif;
   font-optical-sizing: auto;
@@ -419,6 +462,21 @@ nav > a:hover {
   margin: var(--hgap) var(--gap);
   border: solid 0.01em var(--black);
   border-left: solid 0.16em var(--gray);
+}
+
+.blog ::marker {
+  color: var(--gray);
+  font-family: monospace;
+}
+
+.blog ul {
+  text-align: left;
+  list-style-type: square;
+}
+
+.blog ol {
+  text-align: left;
+  list-style-type: number;
 }
 
 hr {

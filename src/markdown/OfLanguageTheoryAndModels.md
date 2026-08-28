@@ -10,10 +10,12 @@ asdasd[^1]
 
 [^1]: my footnote, that the parser clearly captures this text as part of the parse through since it doesnt render as a paragraph nor text.. so why the fck isnt it captured as string at least and placed in the fckin AST? bloody hell m8
 
+[^2]: another one
+
 Now, i present to you a piece of `inline code` written between words.
 
 - [ ] buy liberties
-- [ ] enact reforms
+- [x] enact reforms
 
 <div><span>is this html?</span></div>
 
@@ -99,6 +101,16 @@ Reminds me alot of the mochizuki abc conjecture proof. Is that really mathematic
 
 very short paragraph
 
+- this
+- is
+  1. a
+  2. list
+
 hello
 
 <div style="background-color: var(--white); color: var(--gold);" class="lol" >html?</div>
+
+| *column1* | column 2 | column3 |
+| ------- | -------- | ------- |
+| a       | b        | c       |
+| d       | e        | f       |
