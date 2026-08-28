@@ -158,10 +158,13 @@ a.goldbgh:hover {
   color: var(--dark);
 }
 
-/** portrait */
 figure {
   border: var(--black) solid 0.05em;
   max-width: fit-content;
+}
+
+.blog figure {
+  border: var(--gray) solid 0.05em;
 }
 
 figcaption {
@@ -292,6 +295,10 @@ CLASS STYLES
   padding: var(--hgap) 0;
   align-self: flex-end;
   flex: 1;
+}
+
+figcaption {
+  text-align: center;
 }
 
 /* TODO quote component */
@@ -482,4 +489,16 @@ hr {
   color: var(--gray);
   text-align: right;
   padding-right: var(--hgap);
+}
+
+.blog-link {
+  color: var(--bgray);
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.blog-link:hover {
+  background-color: var(--bgray);
+  color: var(--black);
+  cursor: pointer;
 }

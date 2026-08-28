@@ -1,5 +1,5 @@
 import { createContext, createSignal } from "solid-js";
-import { FrontMatter } from "./PostComponents/FrontMatter";
+import { FrontMatter } from "./Post/FrontMatter";
 
 export type State = {
   frontMatter: FrontMatter;

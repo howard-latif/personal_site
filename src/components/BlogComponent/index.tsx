@@ -4,9 +4,9 @@ import { parser } from "markdown-to-jsx/html";
 
 import { POST_DATA, PostId } from "./post_data";
 import createStateSignal, { StateContext } from "./state";
-import Heading from "./PostComponents/Heading";
+import Heading from "./Post/Heading";
 import BlogPostFooter from "./BlogPostFooter";
-import Children from "./Children";
+import Post from "./Post";
 
 type BlogComponentProps = {
   post_id: PostId;
@@ -24,7 +24,7 @@ export default function BlogComponent(props: BlogComponentProps): JSX.Element {
           <Show when={s.frontMatter().date !== undefined}>
             <div class="blog-date">{s.frontMatter().date}</div>
           </Show>
-          <Children nodes={parser(POST_DATA[props.post_id].raw)} />
+          <Post ast={parser(POST_DATA[props.post_id].raw)} />
         </div>
         <BlogPostFooter />
       </div>

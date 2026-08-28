@@ -50,4 +50,4 @@ export const POST_DATA: PostData = {
   },
 };
 
-// TODO can this be automatically generate from the directory?
+// TODO can this be automatically generated from the directory?

@@ -1,24 +1,7 @@
 import { Title } from "@solidjs/meta";
 import { useNavigate } from "@solidjs/router";
 import ContentList from "../../components/ContentList";
-
-function Portrait() {
-  return (
-    <div class="center">
-      <figure style="margin: 1em;">
-        <figure style="margin: 0.5em;">
-          <figure style="margin: 0.15em; padding: 1em;">
-            <img
-              class="landing-img noselect"
-              src="/personal_site/landing.jpeg"
-            />
-            <figcaption>art by malena bozzini</figcaption>
-          </figure>
-        </figure>
-      </figure>
-    </div>
-  );
-}
+import Portrait from "../../components/Portrait";
 
 function Quote() {
   const navigate = useNavigate();
@@ -49,7 +32,10 @@ export default function Home() {
     <main>
       <Title>Home - Howard Latif</Title>
       <h1>Howard Latif</h1>
-      <Portrait />
+      <Portrait
+        target={"/personal_site/landing.jpeg"}
+        caption={"art by malena bozzini"}
+      />
       <Quote />
       <ContentList>
         <div style="padding-top: var(--gap);">

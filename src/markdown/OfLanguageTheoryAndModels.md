@@ -8,9 +8,16 @@ The use of mathematics as a field (to me) isn't so much about the production of 
 asd\
 asdasd[^1]
 
-[^1]: my footnote.
+[^1]: my footnote, that the parser clearly captures this text as part of the parse through since it doesnt render as a paragraph nor text.. so why the fck isnt it captured as string at least and placed in the fckin AST? bloody hell m8
 
 Now, i present to you a piece of `inline code` written between words.
+
+- [ ] buy liberties
+- [ ] enact reforms
+
+<div><span>is this html?</span></div>
+
+[my link](https://localhost:3000)
 
 ---
 
@@ -66,6 +73,8 @@ good
 asd
 ```
 
+---
+
 asd
 
 > hello im a blockquote
@@ -77,6 +86,10 @@ asd
 > > multiline nested quote type shit
 > >
 > > > another one
+> >
+> > > and another one
+
+![Tux, the Linux mascot](https://www.markdownguide.org/assets/images/generated/assets/images/tux-1080.webp)
 
 Thus the activity of producing proofs, that the field itself cannot build up upon to further the field or other domains is an activity of mathematics. If it does not invite engagement, is that really mathematics?
 

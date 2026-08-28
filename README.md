@@ -15,10 +15,19 @@ BACKEND:
 
 - blog
   - (1) component per rule
+    - gfm; sort out static checkbox design, maybe just use icon?
+    - lists; sort out design for lists
+    - textformatted; wtf are textformatted?
+    - HtmlSelfClosing; wtf?
+    - ref; wtf are refs?
+    - table; oi vey..
+    - htmlblock; dynamic JSX.Element construction
+    - footnote; blocked by custom parse
+    - math; blocked by katex and custom parse
   - (2) detect math e.g. $E=mc^2$ and block $$\\begin{align}\nf(x) &= y \\\\\n g \circ f(x) &= z\n\\end{align}$$
 
 TECH DEBT:
 
 - figure out how to prepend `personal_site` to all paths
   - otherwise make a hack for router.ts for paths call to prepend it
-- use memo for warning (ensure its compute once values i.e. from markdown not live data)...
+- download font file and load it up as public asset. make everything self contained.. no link to outside

@@ -1,0 +1,1 @@
+import{A as e,S as t,f as n}from"./web-Dcj-DR1q.js";import{n as r}from"./virtual_solid-ssr-entry-client-DhwTDSux.js";var i=t(`<main><h1>Page Not Found`);function a(){var t=i();return t.firstChild,n(t,e(r,{children:`Not Found - Solid App`}),t.firstChild),t}export{a as default};
