@@ -15,13 +15,10 @@ BACKEND:
 
 - blog
   - (1) component per rule
-    - gfm; sort out static checkbox design, maybe just use icon?
     - lists; sort out design for lists
-    - textformatted; wtf are textformatted?
-    - HtmlSelfClosing; wtf?
+    - gfm; sort out static checkbox design, maybe just use icon?
     - ref; wtf are refs?
     - table; oi vey..
-    - htmlblock; dynamic JSX.Element construction
     - footnote; blocked by custom parse
     - math; blocked by katex and custom parse
   - (2) detect math e.g. $E=mc^2$ and block $$\\begin{align}\nf(x) &= y \\\\\n g \circ f(x) &= z\n\\end{align}$$

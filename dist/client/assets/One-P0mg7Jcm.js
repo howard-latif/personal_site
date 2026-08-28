@@ -1,1 +1,0 @@
-import{A as e}from"./web-Dcj-DR1q.js";import{t}from"./Portrait-Cp3Juny7.js";function n(){return e(t,{target:`/personal_site/one.jpg`})}export{n as default};

@@ -20,6 +20,7 @@ import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import Link from "./Link";
 import Portrait from "../../Portrait";
+import HtmlElement from "./HtmlElement";
 
 type Node = typeof ASTNode;
 
@@ -81,18 +82,22 @@ export default function Post(props: PostProps): JSX.Element {
                 </Heading>
               </MatchRule>
               <MatchRule rule={RuleType.htmlBlock}>
-                <></>
-                {/* TODO use js default window DOM methods?
-      unless solidjs has some util to create JSX.Element dynamically */}
+                <HtmlElement tag={node.tag} a={node.a}>
+                  <Post ast={node.children} />
+                </HtmlElement>
               </MatchRule>
               <MatchRule rule={RuleType.htmlComment}>
                 <></>
               </MatchRule>
               <MatchRule rule={RuleType.htmlSelfClosing}>
-                <></> {/* TODO */}
+                <></> {/* keine ahnung */}
               </MatchRule>
               <MatchRule rule={RuleType.image}>
-                <Portrait target={node.target} caption={node.alt} alt={node.alt} />
+                <Portrait
+                  target={node.target}
+                  caption={node.alt}
+                  alt={node.alt}
+                />
               </MatchRule>
               <MatchRule rule={RuleType.link}>
                 <Link target={node.target}>
@@ -121,7 +126,9 @@ export default function Post(props: PostProps): JSX.Element {
               </MatchRule>
               <MatchRule rule={RuleType.text}>{node.text}</MatchRule>
               <MatchRule rule={RuleType.textFormatted}>
-                <></> {/* TODO */}
+                <span class={node.tag === "em" ? "italic" : "bold"}>
+                  <Post ast={node.children} />
+                </span>
               </MatchRule>
             </Switch>
           </NodeContext>

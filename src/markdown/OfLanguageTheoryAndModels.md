@@ -17,7 +17,7 @@ Now, i present to you a piece of `inline code` written between words.
 
 <div><span>is this html?</span></div>
 
-[my link](https://localhost:3000)
+[pre sam altman chatgpt](https://www.google.com)
 
 ---
 
@@ -73,6 +73,8 @@ good
 asd
 ```
 
+_is this formatted text_ and **this as well?**
+
 ---
 
 asd
@@ -98,3 +100,5 @@ Reminds me alot of the mochizuki abc conjecture proof. Is that really mathematic
 very short paragraph
 
 hello
+
+<div style="background-color: var(--white); color: var(--gold);" class="lol" >html?</div>

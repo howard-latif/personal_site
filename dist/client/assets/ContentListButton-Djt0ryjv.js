@@ -1,1 +1,0 @@
-import{S as e,f as t,n,o as r,r as i,s as a,y as o}from"./web-Dcj-DR1q.js";var s=e(`<a>§ `);function c(e){var r=s();return r.firstChild,n(r,`click`,e.onClick,!0),i(r),t(r,()=>e.children,null),a(()=>e.url,e=>{o(r,`href`,e)}),r}r([`click`]);export{c as t};

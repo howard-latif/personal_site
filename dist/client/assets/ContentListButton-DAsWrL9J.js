@@ -1,0 +1,1 @@
+import{C as e,b as t,c as n,i as r,p as i,r as a,s as o}from"./web-D39LAUKs.js";var s=e(`<a>§ `);function c(e){var o=s();return o.firstChild,a(o,`click`,e.onClick,!0),r(o),i(o,()=>e.children,null),n(()=>e.url,e=>{t(o,`href`,e)}),o}o([`click`]);export{c as t};

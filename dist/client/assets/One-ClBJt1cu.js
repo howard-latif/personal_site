@@ -1,0 +1,1 @@
+import{j as e}from"./web-D39LAUKs.js";import{t}from"./Portrait-B8BaccgX.js";function n(){return e(t,{target:`/personal_site/one.jpg`})}export{n as default};
