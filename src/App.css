@@ -6,6 +6,7 @@ VARIABLES
   /* colors */
   --black: rgb(55 55 55);
   --white: rgb(231 231 225);
+  --hdark: rgb(40 40 40);
   --dark: rgb(25 25 25);
   --bright: rgb(247 247 247);
   --gray: rgb(120 120 120);
@@ -564,4 +565,13 @@ hr {
   background-color: var(--bgray);
   color: var(--black);
   cursor: pointer;
+}
+
+.blog-table {
+  display: grid;
+}
+
+.blog-table > div {
+  margin: 0.05em;
+  background-color: var(--hdark);
 }

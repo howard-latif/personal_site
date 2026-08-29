@@ -3,7 +3,7 @@ date: 17th Aug 2026
 title: Of Language, Theory and Models
 ---
 
-The use of mathematics as a field (to me) isn't so much about the production of proofs in papers, or to construct new structures for their own sake. But rather for their eventual use, in mathematics itself or other domains, be it science, technology or the humanities, or even in the arts.
+The use of mathematics as a field (to me) isn't so much about the production of proofs in papers, or to construct new structures for their own sake. But rather for their eventual use, in mathematics itself or other domains, be it science, technology or the humanities, or even in the arts. blablabla.
 
 asd\
 asdasd[^1]
@@ -110,7 +110,11 @@ hello
 
 <div style="background-color: var(--white); color: var(--gold);" class="lol" >html?</div>
 
-| *column1* | column 2 | column3 |
-| ------- | -------- | ------- |
-| a       | b        | c       |
-| d       | e        | f       |
+wheres the table?
+
+| _column1_ | column2 | column3 | col4 |
+| --------- | ------- | ------- | ---- |
+| a         | b       | c       | X    |
+| d         | e       | f       | Y    |
+
+its not above?
