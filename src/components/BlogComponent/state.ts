@@ -11,10 +11,8 @@ export type StateContext = {
   frontMatter: () => FrontMatter;
   setFrontMatter: (value: FrontMatter) => void;
   refNames: () => string[];
-  refTarget: (name: string) => string;
-  refTitle: (name: string) => string | undefined;
-  setRef: (name: string, target: string, title?: string) => void;
   setRefCollection: (obj: RefCollection) => void;
+  refs: () => RefCollection;
 };
 
 export const StateContext = createContext<StateContext>();
@@ -26,15 +24,11 @@ export default function createStateSignal(): StateContext {
   } as State);
   return {
     frontMatter: () => value().frontMatter,
-    setFrontMatter: (x) => setValue((obj) => ({ ...obj, frontMatter: x })),
-    setRefCollection: (refs) => setValue((obj) => ({ ...obj, refs })),
-    setRef: (name, target, title) =>
-      setValue((obj) => ({
-        ...obj,
-        refs: { ...obj.refs, [name]: { target, title } },
-      })),
-    refTarget: (n) => value().refs[n].target,
-    refTitle: (n) => value().refs[n].title,
+    setFrontMatter: (x: FrontMatter) =>
+      setValue((obj) => ({ ...obj, frontMatter: x })),
+    refs: () => value().refs,
+    setRefCollection: (refs: RefCollection) =>
+      setValue((obj) => ({ ...obj, refs })),
     refNames: () => Object.keys(value().refs),
   };
 }

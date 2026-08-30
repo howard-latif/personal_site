@@ -27,8 +27,9 @@ export default function BlogComponent(props: BlogComponentProps): JSX.Element {
             <div class="blog-date">{s.frontMatter().date}</div>
           </Show>
           <Post ast={ast} />
-          <Refs />
+          <br />
         </div>
+        <Refs />
         <BlogPostFooter />
       </div>
     </StateContext>

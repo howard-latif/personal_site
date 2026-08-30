@@ -22,7 +22,9 @@ import Link from "./Link";
 import Portrait from "../../Portrait";
 import HtmlElement from "./HtmlElement";
 import { OrderedList, UnorderedList } from "./List";
-import SetRefs from "./SetRefs";
+import SetRefs, { targetToId } from "./SetRefs";
+import MathBlock from "./MathBlock";
+import FootnoteRef from "./FootnoteRef";
 
 export type Node = typeof ASTNode;
 
@@ -62,16 +64,20 @@ export default function Post(props: PostProps): JSX.Element {
                   <ThematicBreak />
                 </MatchRule>
                 <MatchRule rule={RuleType.codeBlock}>
-                  <CodeBlock lang={node.lang} code={node.text} />
+                  {node.lang === "math" ? (
+                    <MathBlock code={node.text} />
+                  ) : (
+                    <CodeBlock lang={node.lang} code={node.text} />
+                  )}
                 </MatchRule>
                 <MatchRule rule={RuleType.codeInline}>
                   <InlineCode code={node.text} />
                 </MatchRule>
                 <MatchRule rule={RuleType.footnote}>
-                  <></> {/* TODO */}
+                  <></> {/* do nothing, handled by SetRef */}
                 </MatchRule>
                 <MatchRule rule={RuleType.footnoteReference}>
-                  <></> {/* TODO */}
+                  <FootnoteRef target={node.target} text={node.text} />
                 </MatchRule>
                 <MatchRule rule={RuleType.frontmatter}>
                   <SetFrontMatter text={node.text} />
@@ -126,8 +132,10 @@ export default function Post(props: PostProps): JSX.Element {
                     class="blog-table"
                     style={`grid-template-columns: repeat(${node.header.length}, 1fr);`}
                   >
-                    <Post ast={node.header.flat(1)} wrap />
-                    <Post ast={node.cells.flat(2)} wrap />
+                    <Post
+                      ast={node.header.flat(1).concat(node.cells.flat(2))}
+                      wrap
+                    />
                   </div>
                 </MatchRule>
                 <MatchRule rule={RuleType.text}>{node.text}</MatchRule>

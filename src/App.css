@@ -97,6 +97,10 @@ GLOBAL STYLES
   background-color: var(--gold);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Baskervville", serif;
   font-size: 0.975em;

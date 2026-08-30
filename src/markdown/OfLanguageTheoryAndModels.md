@@ -8,7 +8,7 @@ The use of mathematics as a field (to me) isn't so much about the production of 
 asd\
 asdasd[^1]
 
-[^1]: my footnote, that the parser clearly captures this text as part of the parse through since it doesnt render as a paragraph nor text.. so why the fck isnt it captured as string at least and placed in the fckin AST? bloody hell m8
+[^1]: wtf
 
 [^2]: another one
 
@@ -118,3 +118,10 @@ wheres the table?
 | d         | e       | f       | Y    |
 
 its not above?
+
+```math
+\begin{align}
+f &: X \to Y \\
+f x &:= y
+\end{align}
+```

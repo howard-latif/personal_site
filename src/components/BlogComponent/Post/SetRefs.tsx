@@ -8,6 +8,10 @@ type SetRefsProps = {
   refs: RefCollection;
 };
 
+export function targetToId(target: string, hash: boolean = false): string {
+  return `${hash ? "#" : ""}blog_footnote_${target.substring(1)}`;
+}
+
 export default function SetRefs(props: SetRefsProps): JSX.Element {
   const { setRefCollection } = useContext(StateContext);
   queueMicrotask(() => setRefCollection(props.refs));
